@@ -54,3 +54,9 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
 }
+
+extension Notification.Name {
+    static var applicationIsActive: Notification.Name {
+      Notification.Name("applicationIsActive")
+    }
+}

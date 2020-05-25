@@ -11,13 +11,39 @@
 		84A54426247BBEF00029AA02 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A54424247BBEF00029AA02 /* Interface.storyboard */; };
 		84A54428247BBEF10029AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A54427247BBEF10029AA02 /* Assets.xcassets */; };
 		84A5442F247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		84A54434247BBEF10029AA02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54433247BBEF10029AA02 /* ContentView.swift */; };
 		84A54436247BBEF10029AA02 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54435247BBEF10029AA02 /* HostingController.swift */; };
 		84A54438247BBEF10029AA02 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54437247BBEF10029AA02 /* ExtensionDelegate.swift */; };
 		84A5443A247BBEF10029AA02 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54439247BBEF10029AA02 /* NotificationController.swift */; };
 		84A5443C247BBEF10029AA02 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5443B247BBEF10029AA02 /* NotificationView.swift */; };
 		84A5443E247BBEF10029AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A5443D247BBEF10029AA02 /* Assets.xcassets */; };
 		84A54441247BBEF10029AA02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A54440247BBEF10029AA02 /* Preview Assets.xcassets */; };
+		84A54457247BC10E0029AA02 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54455247BC10E0029AA02 /* Utility.swift */; };
+		84A54458247BC10E0029AA02 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54456247BC10E0029AA02 /* FieldValidator.swift */; };
+		84A5445B247BC1200029AA02 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54459247BC1200029AA02 /* ServiceError.swift */; };
+		84A5445C247BC1200029AA02 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5445A247BC1200029AA02 /* WebService.swift */; };
+		84A54469247BC17C0029AA02 /* GarageDoorStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5445D247BC17B0029AA02 /* GarageDoorStatus.swift */; };
+		84A5446A247BC17C0029AA02 /* LogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5445E247BC17C0029AA02 /* LogStore.swift */; };
+		84A5446B247BC17C0029AA02 /* StatusStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5445F247BC17C0029AA02 /* StatusStore.swift */; };
+		84A5446C247BC17C0029AA02 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54460247BC17C0029AA02 /* Model.swift */; };
+		84A5446D247BC17C0029AA02 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54461247BC17C0029AA02 /* DeviceModel.swift */; };
+		84A5446E247BC17C0029AA02 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54462247BC17C0029AA02 /* Config.swift */; };
+		84A5446F247BC17C0029AA02 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54463247BC17C0029AA02 /* Configuration.swift */; };
+		84A54470247BC17D0029AA02 /* GarageDoorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54464247BC17C0029AA02 /* GarageDoorLog.swift */; };
+		84A54471247BC17D0029AA02 /* OptionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54465247BC17C0029AA02 /* OptionsStore.swift */; };
+		84A54472247BC17D0029AA02 /* GarageDoorOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54466247BC17C0029AA02 /* GarageDoorOptions.swift */; };
+		84A54473247BC17D0029AA02 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54467247BC17C0029AA02 /* ResultModel.swift */; };
+		84A54474247BC17D0029AA02 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54468247BC17C0029AA02 /* Controller.swift */; };
+		84A54482247BC1F50029AA02 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54476247BC1F40029AA02 /* StatusView.swift */; };
+		84A54483247BC1F50029AA02 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54477247BC1F40029AA02 /* OptionsView.swift */; };
+		84A54484247BC1F50029AA02 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54478247BC1F40029AA02 /* DeviceListView.swift */; };
+		84A54486247BC1F50029AA02 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447A247BC1F50029AA02 /* HomeView.swift */; };
+		84A54487247BC1F50029AA02 /* SignalStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447B247BC1F50029AA02 /* SignalStrengthView.swift */; };
+		84A54489247BC1F50029AA02 /* DoorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447D247BC1F50029AA02 /* DoorView.swift */; };
+		84A5448A247BC1F50029AA02 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447E247BC1F50029AA02 /* InfoView.swift */; };
+		84A5448B247BC1F50029AA02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447F247BC1F50029AA02 /* ContentView.swift */; };
+		84A5448C247BC1F50029AA02 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54480247BC1F50029AA02 /* AboutView.swift */; };
+		84A5448D247BC1F50029AA02 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54481247BC1F50029AA02 /* EditView.swift */; };
+		84A5448F247BC8790029AA02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5448E247BC8790029AA02 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +95,6 @@
 		84A54427247BBEF10029AA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A54429247BBEF10029AA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchGarageDoor WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84A54433247BBEF10029AA02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84A54435247BBEF10029AA02 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		84A54437247BBEF10029AA02 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		84A54439247BBEF10029AA02 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -78,6 +103,33 @@
 		84A54440247BBEF10029AA02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84A54442247BBEF10029AA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A54443247BBEF10029AA02 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		84A54455247BC10E0029AA02 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		84A54456247BC10E0029AA02 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
+		84A54459247BC1200029AA02 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		84A5445A247BC1200029AA02 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		84A5445D247BC17B0029AA02 /* GarageDoorStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarageDoorStatus.swift; sourceTree = "<group>"; };
+		84A5445E247BC17C0029AA02 /* LogStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogStore.swift; sourceTree = "<group>"; };
+		84A5445F247BC17C0029AA02 /* StatusStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusStore.swift; sourceTree = "<group>"; };
+		84A54460247BC17C0029AA02 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		84A54461247BC17C0029AA02 /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		84A54462247BC17C0029AA02 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		84A54463247BC17C0029AA02 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		84A54464247BC17C0029AA02 /* GarageDoorLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarageDoorLog.swift; sourceTree = "<group>"; };
+		84A54465247BC17C0029AA02 /* OptionsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsStore.swift; sourceTree = "<group>"; };
+		84A54466247BC17C0029AA02 /* GarageDoorOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GarageDoorOptions.swift; sourceTree = "<group>"; };
+		84A54467247BC17C0029AA02 /* ResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		84A54468247BC17C0029AA02 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		84A54476247BC1F40029AA02 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		84A54477247BC1F40029AA02 /* OptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		84A54478247BC1F40029AA02 /* DeviceListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		84A5447A247BC1F50029AA02 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		84A5447B247BC1F50029AA02 /* SignalStrengthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalStrengthView.swift; sourceTree = "<group>"; };
+		84A5447D247BC1F50029AA02 /* DoorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorView.swift; sourceTree = "<group>"; };
+		84A5447E247BC1F50029AA02 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		84A5447F247BC1F50029AA02 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84A54480247BC1F50029AA02 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		84A54481247BC1F50029AA02 /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		84A5448E247BC8790029AA02 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +175,13 @@
 		84A54432247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				84A54433247BBEF10029AA02 /* ContentView.swift */,
-				84A54435247BBEF10029AA02 /* HostingController.swift */,
+				84A54451247BBF600029AA02 /* Models */,
+				84A54453247BBF730029AA02 /* Services */,
+				84A54452247BBF680029AA02 /* ViewModels */,
+				84A54475247BC1DB0029AA02 /* Views */,
+				84A54454247BC0DE0029AA02 /* Utilities */,
 				84A54437247BBEF10029AA02 /* ExtensionDelegate.swift */,
+				84A54435247BBEF10029AA02 /* HostingController.swift */,
 				84A54439247BBEF10029AA02 /* NotificationController.swift */,
 				84A5443B247BBEF10029AA02 /* NotificationView.swift */,
 				84A5443D247BBEF10029AA02 /* Assets.xcassets */,
@@ -142,6 +198,68 @@
 				84A54440247BBEF10029AA02 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84A54451247BBF600029AA02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84A54462247BC17C0029AA02 /* Config.swift */,
+				84A54463247BC17C0029AA02 /* Configuration.swift */,
+				84A54468247BC17C0029AA02 /* Controller.swift */,
+				84A54461247BC17C0029AA02 /* DeviceModel.swift */,
+				84A54464247BC17C0029AA02 /* GarageDoorLog.swift */,
+				84A54466247BC17C0029AA02 /* GarageDoorOptions.swift */,
+				84A5445D247BC17B0029AA02 /* GarageDoorStatus.swift */,
+				84A5445E247BC17C0029AA02 /* LogStore.swift */,
+				84A54460247BC17C0029AA02 /* Model.swift */,
+				84A54465247BC17C0029AA02 /* OptionsStore.swift */,
+				84A54467247BC17C0029AA02 /* ResultModel.swift */,
+				84A5445F247BC17C0029AA02 /* StatusStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84A54452247BBF680029AA02 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84A54453247BBF730029AA02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84A54459247BC1200029AA02 /* ServiceError.swift */,
+				84A5445A247BC1200029AA02 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84A54454247BC0DE0029AA02 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				84A54456247BC10E0029AA02 /* FieldValidator.swift */,
+				84A5448E247BC8790029AA02 /* Extensions.swift */,
+				84A54455247BC10E0029AA02 /* Utility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		84A54475247BC1DB0029AA02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84A54480247BC1F50029AA02 /* AboutView.swift */,
+				84A5447F247BC1F50029AA02 /* ContentView.swift */,
+				84A54478247BC1F40029AA02 /* DeviceListView.swift */,
+				84A5447D247BC1F50029AA02 /* DoorView.swift */,
+				84A54481247BC1F50029AA02 /* EditView.swift */,
+				84A5447A247BC1F50029AA02 /* HomeView.swift */,
+				84A5447E247BC1F50029AA02 /* InfoView.swift */,
+				84A54477247BC1F40029AA02 /* OptionsView.swift */,
+				84A5447B247BC1F50029AA02 /* SignalStrengthView.swift */,
+				84A54476247BC1F40029AA02 /* StatusView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,11 +390,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A54484247BC1F50029AA02 /* DeviceListView.swift in Sources */,
+				84A5448C247BC1F50029AA02 /* AboutView.swift in Sources */,
+				84A54469247BC17C0029AA02 /* GarageDoorStatus.swift in Sources */,
+				84A5445C247BC1200029AA02 /* WebService.swift in Sources */,
+				84A54486247BC1F50029AA02 /* HomeView.swift in Sources */,
+				84A5446E247BC17C0029AA02 /* Config.swift in Sources */,
+				84A5446A247BC17C0029AA02 /* LogStore.swift in Sources */,
+				84A5445B247BC1200029AA02 /* ServiceError.swift in Sources */,
+				84A54472247BC17D0029AA02 /* GarageDoorOptions.swift in Sources */,
+				84A5448D247BC1F50029AA02 /* EditView.swift in Sources */,
+				84A5448A247BC1F50029AA02 /* InfoView.swift in Sources */,
+				84A54474247BC17D0029AA02 /* Controller.swift in Sources */,
 				84A54436247BBEF10029AA02 /* HostingController.swift in Sources */,
-				84A54434247BBEF10029AA02 /* ContentView.swift in Sources */,
+				84A5446F247BC17C0029AA02 /* Configuration.swift in Sources */,
+				84A54473247BC17D0029AA02 /* ResultModel.swift in Sources */,
+				84A5446C247BC17C0029AA02 /* Model.swift in Sources */,
+				84A54482247BC1F50029AA02 /* StatusView.swift in Sources */,
+				84A54457247BC10E0029AA02 /* Utility.swift in Sources */,
+				84A54489247BC1F50029AA02 /* DoorView.swift in Sources */,
+				84A5448F247BC8790029AA02 /* Extensions.swift in Sources */,
+				84A54471247BC17D0029AA02 /* OptionsStore.swift in Sources */,
+				84A54470247BC17D0029AA02 /* GarageDoorLog.swift in Sources */,
 				84A5443A247BBEF10029AA02 /* NotificationController.swift in Sources */,
+				84A5446D247BC17C0029AA02 /* DeviceModel.swift in Sources */,
 				84A54438247BBEF10029AA02 /* ExtensionDelegate.swift in Sources */,
+				84A54487247BC1F50029AA02 /* SignalStrengthView.swift in Sources */,
+				84A5446B247BC17C0029AA02 /* StatusStore.swift in Sources */,
+				84A5448B247BC1F50029AA02 /* ContentView.swift in Sources */,
+				84A54483247BC1F50029AA02 /* OptionsView.swift in Sources */,
 				84A5443C247BBEF10029AA02 /* NotificationView.swift in Sources */,
+				84A54458247BC10E0029AA02 /* FieldValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -410,6 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -433,6 +579,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -457,6 +604,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -476,6 +624,7 @@
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
 				IBSC_MODULE = WatchGarageDoor_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchGarageDoor WatchKit App/Info.plist";
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -495,6 +644,7 @@
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
 				IBSC_MODULE = WatchGarageDoor_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchGarageDoor WatchKit App/Info.plist";
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -511,7 +661,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -524,7 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
