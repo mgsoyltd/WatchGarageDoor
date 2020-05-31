@@ -14,21 +14,21 @@ final class Config : ObservableObject {
     
     public var didChange = PassthroughSubject<Config, Never>()
     
-    // For displaying the Welcome screen
-    @Configuration(key: "firstLaunch", defaultValue: Date())
-    var firstLaunch: Date {
-        didSet {
-            self.didChange.send(self)
-        }
-    }
-    
-    // For displaying the Welcome screen
-    @Configuration(key: "lastVersion", defaultValue: String())
-    var lastVersion: String {
-        didSet {
-            self.didChange.send(self)
-        }
-    }
+//    // For displaying the Welcome screen
+//    @Configuration(key: "firstLaunch", defaultValue: Date())
+//    var firstLaunch: Date {
+//        didSet {
+//            self.didChange.send(self)
+//        }
+//    }
+//
+//    // For displaying the Welcome screen
+//    @Configuration(key: "lastVersion", defaultValue: String())
+//    var lastVersion: String {
+//        didSet {
+//            self.didChange.send(self)
+//        }
+//    }
     
     // For displaying more info per device on the device list
     @Configuration(key: "showInfoOnList", defaultValue: true)

@@ -54,11 +54,11 @@ struct DeviceListView: View {
             .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle("Devices")
             
-            // First lauch screen
-            .onAppear(perform: showFirstLauch)
-            .sheet(isPresented: $dispHello) {
-                HomeView()
-        }
+//            // First lauch screen
+//            .onAppear(perform: showFirstLauch)
+//            .sheet(isPresented: $dispHello) {
+//                HomeView()
+//        }
             
         .onReceive(isActive) {_ in
             self.reload()
@@ -123,24 +123,24 @@ struct DeviceListView: View {
         #endif
     }
     
-    private func showFirstLauch() {
-        // Display welcome screen once a day or when version has changed
-        #if DEBUG
-        print("firstLauch: \(justDate(config.firstLaunch)) vs Date(): \(justDate(Date()))")
-        #endif
-        if justDate(config.firstLaunch) < justDate(Date()) ||
-            config.lastVersion != getAppVersion() {
-            dispHello = true
-            config.firstLaunch = Date()
-            config.lastVersion = getAppVersion()
-        }
-    }
-    
-    func justDate(_ originalDate: Date) -> Date {
-        let components = Calendar.current.dateComponents([.year, .month, .day], from: originalDate)
-        let date = Calendar.current.date(from: components)
-        return date!
-    }
+//    private func showFirstLauch() {
+//        // Display welcome screen once a day or when version has changed
+//        #if DEBUG
+//        print("firstLauch: \(justDate(config.firstLaunch)) vs Date(): \(justDate(Date()))")
+//        #endif
+//        if justDate(config.firstLaunch) < justDate(Date()) ||
+//            config.lastVersion != getAppVersion() {
+//            dispHello = true
+//            config.firstLaunch = Date()
+//            config.lastVersion = getAppVersion()
+//        }
+//    }
+//
+//    func justDate(_ originalDate: Date) -> Date {
+//        let components = Calendar.current.dateComponents([.year, .month, .day], from: originalDate)
+//        let date = Calendar.current.date(from: components)
+//        return date!
+//    }
     
 }
 
