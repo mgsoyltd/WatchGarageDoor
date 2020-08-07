@@ -73,10 +73,10 @@ public struct OptionsView: View {
                 
             } // end of section
         } // end of form
-        
-        .onAppear() {
-            // Default value for Show More Info boolean from User Defaults
-            self.showInfo = self.config.showInfoOnList
+            
+            .onAppear() {
+                // Default value for Show More Info boolean from User Defaults
+                self.showInfo = self.config.showInfoOnList
         }
     }
     

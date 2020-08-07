@@ -5,12 +5,37 @@
 //  Created by Bartolomeo Sorrentino on 16/06/2019.
 //  Copyright © 2019 Bartolomeo Sorrentino. All rights reserved.
 //
+//  This module was copied from the GitHub below and made usable in WatchKit Extension.
+//  https://github.com/bsorrentino/swiftui-fieldvalidator.git
+//
+//    MIT License
+//
+//    Copyright (c) 2019 bsorrentino
+//
+//    Permission is hereby granted, free of charge, to any person obtaining a copy
+//    of this software and associated documentation files (the "Software"), to deal
+//    in the Software without restriction, including without limitation the rights
+//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//    copies of the Software, and to permit persons to whom the Software is
+//    furnished to do so, subject to the following conditions:
+//
+//    The above copyright notice and this permission notice shall be included in all
+//    copies or substantial portions of the Software.
+//
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//    SOFTWARE.
+
 
 import SwiftUI
 import Combine
 
-
 @available(iOS 13, *)
+@available(watchOS 6, *)
 public struct FieldChecker {
     
     public var errorMessage:String?
@@ -24,6 +49,7 @@ public struct FieldChecker {
 }
 
 @available(iOS 13, *)
+@available(watchOS 6, *)
 public class FieldValidator<T> : ObservableObject where T : Hashable {
     public typealias Validator = (T) -> String?
     
@@ -66,6 +92,7 @@ public class FieldValidator<T> : ObservableObject where T : Hashable {
 }
 
 @available(iOS 13, *)
+@available(watchOS 6, *)
 public struct TextFieldWithValidator : View {
     // specialize validator for TestField ( T = String )
     public typealias Validator = (String) -> String?
@@ -91,6 +118,7 @@ public struct TextFieldWithValidator : View {
 }
 
 @available(iOS 13, *)
+@available(watchOS 6, *)
 public struct SecureFieldWithValidator : View {
     // specialize validator for TestField ( T = String )
     public typealias Validator = (String) -> String?
