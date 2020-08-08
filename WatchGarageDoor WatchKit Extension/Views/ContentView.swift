@@ -44,7 +44,6 @@ struct ContentView: View {
                 .onReceive(self.statusModel.didChange) { value in
                     self.validDevice = ( self.statusModel.doorStatus.mac != "" )
                  }
-                
             }
             // Possible error messages
             Text(self.logModel.changeStatus.alert)
