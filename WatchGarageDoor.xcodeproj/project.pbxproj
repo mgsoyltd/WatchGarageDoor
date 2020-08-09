@@ -145,10 +145,10 @@
 		84A54414247BBEF00029AA02 = {
 			isa = PBXGroup;
 			children = (
-				848F070324DFFF9C00B9A9A5 /* README.md */,
 				84A54423247BBEF00029AA02 /* WatchGarageDoor WatchKit App */,
 				84A54432247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */,
 				84A5441C247BBEF00029AA02 /* Products */,
+				848F070324DFFF9C00B9A9A5 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
