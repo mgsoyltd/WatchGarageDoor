@@ -36,7 +36,6 @@
 		84A54482247BC1F50029AA02 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54476247BC1F40029AA02 /* StatusView.swift */; };
 		84A54483247BC1F50029AA02 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54477247BC1F40029AA02 /* OptionsView.swift */; };
 		84A54484247BC1F50029AA02 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54478247BC1F40029AA02 /* DeviceListView.swift */; };
-		84A54486247BC1F50029AA02 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447A247BC1F50029AA02 /* HomeView.swift */; };
 		84A54487247BC1F50029AA02 /* SignalStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447B247BC1F50029AA02 /* SignalStrengthView.swift */; };
 		84A54489247BC1F50029AA02 /* DoorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447D247BC1F50029AA02 /* DoorView.swift */; };
 		84A5448A247BC1F50029AA02 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5447E247BC1F50029AA02 /* InfoView.swift */; };
@@ -90,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		84663B5E24DD89B800086E9E /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
+		848F070324DFFF9C00B9A9A5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84A5441B247BBEF00029AA02 /* WatchGarageDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGarageDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5441F247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchGarageDoor WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A54425247BBEF00029AA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -122,7 +122,6 @@
 		84A54476247BC1F40029AA02 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		84A54477247BC1F40029AA02 /* OptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		84A54478247BC1F40029AA02 /* DeviceListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
-		84A5447A247BC1F50029AA02 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		84A5447B247BC1F50029AA02 /* SignalStrengthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalStrengthView.swift; sourceTree = "<group>"; };
 		84A5447D247BC1F50029AA02 /* DoorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorView.swift; sourceTree = "<group>"; };
 		84A5447E247BC1F50029AA02 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		84A54414247BBEF00029AA02 = {
 			isa = PBXGroup;
 			children = (
+				848F070324DFFF9C00B9A9A5 /* README.md */,
 				84A54423247BBEF00029AA02 /* WatchGarageDoor WatchKit App */,
 				84A54432247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */,
 				84A5441C247BBEF00029AA02 /* Products */,
@@ -253,7 +253,6 @@
 				84A54478247BC1F40029AA02 /* DeviceListView.swift */,
 				84A5447D247BC1F50029AA02 /* DoorView.swift */,
 				84A54481247BC1F50029AA02 /* EditView.swift */,
-				84A5447A247BC1F50029AA02 /* HomeView.swift */,
 				84A5447E247BC1F50029AA02 /* InfoView.swift */,
 				84A54477247BC1F40029AA02 /* OptionsView.swift */,
 				84A5447B247BC1F50029AA02 /* SignalStrengthView.swift */,
@@ -400,7 +399,6 @@
 				84A5448C247BC1F50029AA02 /* AboutView.swift in Sources */,
 				84A54469247BC17C0029AA02 /* GarageDoorStatus.swift in Sources */,
 				84A5445C247BC1200029AA02 /* WebService.swift in Sources */,
-				84A54486247BC1F50029AA02 /* HomeView.swift in Sources */,
 				84A5446E247BC17C0029AA02 /* Config.swift in Sources */,
 				84A5446A247BC17C0029AA02 /* LogStore.swift in Sources */,
 				84A5445B247BC1200029AA02 /* ServiceError.swift in Sources */,

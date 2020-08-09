@@ -5,6 +5,8 @@
 //  Created by mgs on 27.4.2020.
 //  Copyright © 2020 Morning Glow Solutions Oy Ltd. All rights reserved.
 //
+//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware docs/OGAPI1.1.0.pdf
+//
 
 import SwiftUI
 

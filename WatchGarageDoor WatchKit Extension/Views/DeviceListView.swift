@@ -126,8 +126,27 @@ struct DeviceListView_Previews: PreviewProvider {
     static let config = Config()
     
     static var previews: some View {
-        DeviceListView()
-            .environmentObject(config)
+        Group {
+             DeviceListView()
+                 .environmentObject(config)
+                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 4 - 44mm"))
+                 .previewDisplayName("Series 4 - 44mm")
+             
+             DeviceListView()
+                 .environmentObject(config)
+                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 5 - 44mm"))
+                 .previewDisplayName("Series 5 - 44mm")
+             
+             DeviceListView()
+                 .environmentObject(config)
+                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 5 - 40mm"))
+                 .previewDisplayName("Series 5 - 40mm")
+             
+             DeviceListView()
+                 .environmentObject(config)
+                 .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 3 - 42mm"))
+                 .previewDisplayName("Series 3 - 42mm")
+         }
     }
 }
 
