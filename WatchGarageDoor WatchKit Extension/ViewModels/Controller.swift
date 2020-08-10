@@ -5,7 +5,8 @@
 //  Created by mgs on 15.11.2019.
 //  Copyright © 2019 Morning Glow Solutions Oy Ltd. All rights reserved.
 //
-
+//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware docs/OGAPI1.1.0.pdf
+//
 //    Change Controller Variables:
 //    http://devip/cc?​dkey​=xxx&​click​=1&​close​=1&​open​=1&​reboot​=1&​apmode=​ 1
 //    Parameters​:

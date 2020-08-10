@@ -1,28 +1,6 @@
-#  WatchGarageDoor
-
-**Version 1.0.0**
-
-## Garage doors in wrist
-
-With this application, you can conveniently control your garage doors from your wrist.
-Made for Apple Watch Series 4 or later with WatchOS 6.2 or later and runs independently without a companion app on iOS.
-
-This application requires you to own a third-party [OpenGarage](http://opengarage.io) controller that is already setup and working in your local Wifi network.
-Other controllers are not supported!
-
-### Features
-
-- Control multiple garage door controllers
-- Open and close the selected garage door
-- Review status log for open/close actions
-- Maintain settings for controllers
-- Edit device list of controllers (move or delete)
-
-## License & copyright
-
-© 2020 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/Products/)
-
 MIT License
+
+Copyright (c) 2020 Morning Glow Solutions Oy Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
