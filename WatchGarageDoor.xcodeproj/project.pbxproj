@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		843A71B724E10FFE003EFCCD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 843A71B624E10FFE003EFCCD /* LICENSE */; };
-		846ACAD724E0AE4000AFDA91 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846ACAD624E0AE4000AFDA91 /* FieldValidator.swift */; };
 		84A54420247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 84A5441F247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84A54426247BBEF00029AA02 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A54424247BBEF00029AA02 /* Interface.storyboard */; };
 		84A54428247BBEF10029AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A54427247BBEF10029AA02 /* Assets.xcassets */; };
@@ -44,6 +43,7 @@
 		84A5448C247BC1F50029AA02 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54480247BC1F50029AA02 /* AboutView.swift */; };
 		84A5448D247BC1F50029AA02 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54481247BC1F50029AA02 /* EditView.swift */; };
 		84A5448F247BC8790029AA02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5448E247BC8790029AA02 /* Extensions.swift */; };
+		84D5701B24E1299D009A49DB /* FieldValidator in Frameworks */ = {isa = PBXBuildFile; productRef = 84D5701A24E1299D009A49DB /* FieldValidator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,6 @@
 
 /* Begin PBXFileReference section */
 		843A71B624E10FFE003EFCCD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		846ACAD624E0AE4000AFDA91 /* FieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		848F070324DFFF9C00B9A9A5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84A5441B247BBEF00029AA02 /* WatchGarageDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGarageDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5441F247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchGarageDoor WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +130,7 @@
 		84A54480247BC1F50029AA02 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		84A54481247BC1F50029AA02 /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		84A5448E247BC8790029AA02 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84D5701924E127ED009A49DB /* FieldValidator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FieldValidator; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,28 +145,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D5701B24E1299D009A49DB /* FieldValidator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		846ACACE24E0AD4600AFDA91 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		84A54414247BBEF00029AA02 = {
 			isa = PBXGroup;
 			children = (
+				84D5701924E127ED009A49DB /* FieldValidator */,
 				84A54423247BBEF00029AA02 /* WatchGarageDoor WatchKit App */,
 				84A54432247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */,
 				84A5441C247BBEF00029AA02 /* Products */,
 				848F070324DFFF9C00B9A9A5 /* README.md */,
 				843A71B624E10FFE003EFCCD /* LICENSE */,
-				846ACACE24E0AD4600AFDA91 /* Frameworks */,
+				84D5701224E125E6009A49DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				84A5448E247BC8790029AA02 /* Extensions.swift */,
-				846ACAD624E0AE4000AFDA91 /* FieldValidator.swift */,
 				84A54455247BC10E0029AA02 /* Utility.swift */,
 			);
 			path = Utilities;
@@ -277,6 +271,13 @@
 				84A54476247BC1F40029AA02 /* StatusView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		84D5701224E125E6009A49DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +334,7 @@
 			);
 			name = "WatchGarageDoor WatchKit Extension";
 			packageProductDependencies = (
+				84D5701A24E1299D009A49DB /* FieldValidator */,
 			);
 			productName = "WatchGarageDoor WatchKit Extension";
 			productReference = 84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */;
@@ -442,7 +444,6 @@
 				84A54487247BC1F50029AA02 /* SignalStrengthView.swift in Sources */,
 				84A5446B247BC17C0029AA02 /* StatusStore.swift in Sources */,
 				84A5448B247BC1F50029AA02 /* ContentView.swift in Sources */,
-				846ACAD724E0AE4000AFDA91 /* FieldValidator.swift in Sources */,
 				84A54483247BC1F50029AA02 /* OptionsView.swift in Sources */,
 				84A5443C247BBEF10029AA02 /* NotificationView.swift in Sources */,
 			);
@@ -757,6 +758,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84D5701A24E1299D009A49DB /* FieldValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FieldValidator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84A54415247BBEF00029AA02 /* Project object */;
 }

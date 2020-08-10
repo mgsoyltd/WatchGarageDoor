@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FieldValidator
 
 public struct OptionsView: View {
     var index: Int
