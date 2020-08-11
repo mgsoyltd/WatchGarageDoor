@@ -18,6 +18,18 @@ Other controllers are not supported!
 - Maintain settings for controllers
 - Edit device list of controllers (move or delete)
 
+
+### Device Setup
+
+When the device list is empty, you will see "Please, add a device" prompt.
+Or you want to add another device, then force press on the device list  to open a context menu and 
+select New device to maintain its parameters (device name, IP address, Port, Device key (only needed for opening and closing), 
+number of log entries to show etc.). Once you save the settings, you should see the information about the new device.
+
+If you want to change the device settings, tap the device on the device list to select it and see its status log.
+On the status log list, force press to open a context menu for the selected device and select Settings to edit.
+
+
 ## License & copyright
 
 © 2020 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/Products/)
