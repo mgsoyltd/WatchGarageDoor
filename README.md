@@ -18,6 +18,7 @@ Other controllers are not supported!
 - Maintain settings for controllers
 - Edit device list of controllers (move or delete)
 
+Please, see the product page at [https://www.mgsoy.com/Products/](https://www.mgsoy.com/Products/)
 
 ### Device Setup
 
