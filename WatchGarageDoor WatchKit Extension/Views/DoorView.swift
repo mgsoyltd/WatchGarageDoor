@@ -29,6 +29,8 @@ struct DoorView: View {
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let imageCount = 6
     
+    var isNotActive = NotificationCenter.default.publisher(for: .applicationIsDeactive)
+    
     var body: some View {
         Group {
             VStack {
@@ -42,25 +44,33 @@ struct DoorView: View {
                             .opacity(fadeOut ? 0 : 1)
                             .animation(.easeInOut(duration: 5.0))
                             .transition(.asymmetric(insertion: .opacity, removal: .opacity))
-                            .onReceive(timer) { _ in
-                                if self.timeLeft > 0 {
-                                    self.timeLeft -= 1
-                                    if self.isEven(Int(self.timeLeft)) {
-                                        self.imageIndex += self.imageStep
-                                        if self.imageIndex > 0 && self.imageIndex <= self.imageCount {
-                                            self.img = "\(self.imagePrefix)\(String(self.imageIndex))"
-                                        }
+                            .onReceive(isNotActive) { _ in
+                                #if DEBUG
+                                print("Moving to the background - stop animation")
+                                #endif
+                                self.timeLeft = 0
+                                self.fadeOut = true
+                                self.commandVC = false      // Dismiss this view
+                        }
+                        .onReceive(timer) { _ in
+                            if self.timeLeft > 0 {
+                                self.timeLeft -= 1
+                                if self.isEven(Int(self.timeLeft)) {
+                                    self.imageIndex += self.imageStep
+                                    if self.imageIndex > 0 && self.imageIndex <= self.imageCount {
+                                        self.img = "\(self.imagePrefix)\(String(self.imageIndex))"
                                     }
                                 }
-                                if self.timeLeft == 0 {
-                                    self.fadeOut = true
-                                    self.commandVC = false      // Dismiss this view
-                                }
+                            }
+                            if self.timeLeft == 0 {
+                                self.fadeOut = true
+                                self.commandVC = false      // Dismiss this view
+                            }
                         }
                     }
                 } // ZStack
             } // VStack
-            .navigationBarTitle(titleBar)
+                .navigationBarTitle(titleBar)
             
             if self.cmdError {
                 // Controller error

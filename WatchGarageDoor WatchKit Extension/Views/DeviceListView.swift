@@ -59,8 +59,7 @@ struct DeviceListView: View {
         .onReceive(isActive) {_ in
             self.reload()
         }
-            
-            
+
             // Context menu items
             .contextMenu {
                 
