@@ -12,6 +12,7 @@ Other controllers are not supported!
 
 ### Features
 
+- watchOS 7.0 supported
 - Control multiple garage door controllers
 - Open and close the selected garage door
 - Review status log for open/close actions
@@ -34,6 +35,12 @@ number of log entries to show etc.). Once you save the settings, you should see 
 If you want to change the device settings, tap the device on the device list to select it and see its status log.
 On the status log list, select Options toolbar command to open an options menu for the selected device and select Settings to edit.
 
+### Release Notes
+
+- watchOS 7.0 support added
+- New API's Apps and Scenes now utilized
+- As Force Touch Context Menus are deprecated on watchOS 7,  the context menus have been changed to toolbar menus.
+- Bug fiixes and performance improvements
 
 ## License & copyright
 
