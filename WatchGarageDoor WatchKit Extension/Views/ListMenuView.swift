@@ -37,6 +37,7 @@ struct ListMenuView: View {
             }
             .sheet(isPresented: $newVC) {
                 OptionsView(index: self.newIndex, device: DeviceModel())
+                    .environmentObject(config)
             }
             
             // Edit view
@@ -46,7 +47,7 @@ struct ListMenuView: View {
                 Label("Edit", systemImage: "list.dash")
             }
             .sheet(isPresented: $editVC) {
-                EditView()
+                EditView().environmentObject(config)
             }
             
             // About view

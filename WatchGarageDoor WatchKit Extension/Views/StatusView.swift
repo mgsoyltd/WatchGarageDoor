@@ -17,6 +17,8 @@ struct StatusView: View {
     @StateObject var statusModel  = StatusStore()
     @StateObject var optionsModel = OptionsStore()
     
+    @State var optChanged = false
+    
     public var body: some View {
         
         VStack {
@@ -44,8 +46,8 @@ struct StatusView: View {
                     
                 } // HStack
             }
-            if self.config.showInfoOnList {
-                InfoView(options: optionsModel,
+            if self.config.showInfoOnList && self.optChanged {
+                InfoView(options: self.optionsModel,
                          deviceMAC: self.statusModel.doorStatus.mac, more: false)
                 SignalStrength()
             }
@@ -68,6 +70,9 @@ struct StatusView: View {
                 self.statusModel.doorStatus.name != "" && self.statusModel.doorStatus.name != self.config.deviceList[self.index].name {
                 self.config.deviceList[self.index].name = self.statusModel.doorStatus.name
             }
+        }
+        .onReceive(self.optionsModel.willChange) { _ in
+            optChanged = true
         }
         
     }

@@ -35,6 +35,7 @@ struct OptionsMenuView: View {
                 }
                 .sheet(isPresented: self.$commandVC) {
                     DoorView(index: self.index, status: self.doorStatus, commandVC: self.$commandVC)
+                        .environmentObject(config)
                 }
                 
                 // Info
@@ -61,7 +62,9 @@ struct OptionsMenuView: View {
                 Label("Settings", systemImage: "gear")
             }
             .sheet(isPresented: self.$optionsVC) {
-                OptionsView(index: self.index, device: self.config.deviceList[self.index])
+                OptionsView(index: self.index,
+                            device: self.config.deviceList[self.index])
+                    .environmentObject(config)
             }
         } // VStack
         

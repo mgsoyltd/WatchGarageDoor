@@ -20,8 +20,10 @@ struct DeviceListView: View {
         ZStack {
             List {
                 ForEach(self.config.deviceList.indices, id: \.self) { index in
-                    NavigationLink(destination: ContentView(index: index)) {
+                    NavigationLink(destination: ContentView(index: index)
+                                    .environmentObject(config)) {
                         StatusView(index: index)
+                            .environmentObject(config)
                     }
                 }
             } // List
@@ -35,7 +37,7 @@ struct DeviceListView: View {
                 }
             }
             .sheet(isPresented: $settingsVC) {
-                ListMenuView()
+                ListMenuView().environmentObject(config)
             }
             
             if self.config.deviceList.count == 0 {

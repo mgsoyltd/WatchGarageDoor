@@ -14,6 +14,7 @@ struct DoorView: View {
     @Binding var commandVC: Bool
     
     @EnvironmentObject var config: Config
+    
     @ObservedObject var controlModel = Controller()
     
     @State private var timeLeft: CGFloat = 0

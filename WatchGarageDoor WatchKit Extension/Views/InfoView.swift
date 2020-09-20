@@ -48,8 +48,9 @@ struct InfoView: View {
                 }
             }
         }
+        
     }
-
+    
 }
 
 func FWVersion(fwv: Int) -> String {
