@@ -27,6 +27,8 @@ import Combine
 class Controller : ObservableObject {
     
     @Published var changeStatus: ResultModel = ResultModel()
+    
+    public var willChange = PassthroughSubject<Controller, Never>()
     public var didChange = PassthroughSubject<Controller, Never>()
     
     func send(url: URL, args: String) {
@@ -53,7 +55,8 @@ class Controller : ObservableObject {
                                                                 self.changeStatus.item = stat.item
                                                                 self.changeStatus.error = false
                                                                 self.changeStatus.alert = ""
-                                                                self.didChange.send(self)
+                                                                
+                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                             
@@ -61,7 +64,8 @@ class Controller : ObservableObject {
                                                             DispatchQueue.main.async {
                                                                 self.changeStatus.error = true
                                                                 self.changeStatus.alert = ErrorDesc(error: error)
-                                                                self.didChange.send(self)
+                                                                
+                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                         }

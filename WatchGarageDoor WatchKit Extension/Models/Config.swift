@@ -12,6 +12,7 @@ import Combine
 
 final class Config : ObservableObject {
     
+    public var willChange = PassthroughSubject<Config, Never>()
     public var didChange = PassthroughSubject<Config, Never>()
     
 //    // For displaying the Welcome screen
@@ -41,14 +42,21 @@ final class Config : ObservableObject {
     // Array of device objects
     @Configuration(key: "Devices", defaultValue: [DeviceModel]())
     var deviceList: [DeviceModel] {
-        didSet {
-            self.didChange.send(self)
-        }
         willSet {
+            self.willChange.send(self)
+        }
+        didSet {
             self.didChange.send(self)
         }
     }
         
+    func getDevice(_ id: UUID) -> DeviceModel? {
+        if let idx = self.deviceList.firstIndex(where: { $0.id == id }) {
+            return self.deviceList[idx]
+        }
+        return nil
+    }
+    
     func newDevice() -> Int {
         let newDevice = DeviceModel(name: "New device")
         deviceList.append(newDevice)

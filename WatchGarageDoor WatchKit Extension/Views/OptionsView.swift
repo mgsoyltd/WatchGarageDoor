@@ -14,6 +14,7 @@ public struct OptionsView: View {
     var device: DeviceModel
     
     @EnvironmentObject var config: Config
+    
     @Environment(\.presentationMode) var presentationMode
     
     @State private var validIP   = FieldChecker()
@@ -56,12 +57,17 @@ public struct OptionsView: View {
                 // Save action
                 Button(action: {
                     // Save changes
-                    self.config.deviceList[self.index].name      = self.name
-                    self.config.deviceList[self.index].IP        = self.IP
-                    self.config.deviceList[self.index].Port      = self.Port
-                    self.config.deviceList[self.index].Key       = self.Key
-                    self.config.deviceList[self.index].LogRowIdx = self.LogRowIdx
-                    self.config.showInfoOnList                   = self.showInfo
+                    var newIndex = self.index
+                    if self.index < 0 {
+                        // Create a new device
+                        newIndex = self.config.newDevice()
+                    }
+                    self.config.deviceList[newIndex].name      = self.name
+                    self.config.deviceList[newIndex].IP        = self.IP
+                    self.config.deviceList[newIndex].Port      = self.Port
+                    self.config.deviceList[newIndex].Key       = self.Key
+                    self.config.deviceList[newIndex].LogRowIdx = self.LogRowIdx
+                    self.config.showInfoOnList                 = self.showInfo
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Save")
@@ -69,15 +75,23 @@ public struct OptionsView: View {
                 .padding([.leading, .trailing])
                 .foregroundColor(.blue)
                 .accentColor(.blue)
-                    // enable button only if user inputs are valid
-                    .disabled( !(validIP.valid && validPort.valid && validKey.valid) )
+                // enable button only if user inputs are valid
+                .disabled( !(validIP.valid && validPort.valid && validKey.valid) )
                 
             } // end of section
         } // end of form
-            
-            .onAppear() {
-                // Default value for Show More Info boolean from User Defaults
-                self.showInfo = self.config.showInfoOnList
+        
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction ) {
+                Button("Cancel") {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            }
+        }
+        
+        .onAppear() {
+            // Default value for Show More Info boolean from User Defaults
+            self.showInfo = self.config.showInfoOnList
         }
     }
     
@@ -95,11 +109,11 @@ public struct OptionsView: View {
         VStack {
             TextFieldWithValidator( title: "IP Address",
                                     value: self.$IP, checker: $validIP ) { v in
-                                        // validation closure where ‘v’ is the current value
-                                        if( !v.isValidIP() ) {
-                                            return "Invalid IP address"
-                                        }
-                                        return nil
+                // validation closure where ‘v’ is the current value
+                if( !v.isValidIP() ) {
+                    return "Invalid IP address"
+                }
+                return nil
             }
             .frame(height: 40)
             .padding([.leading, .trailing])
@@ -118,11 +132,11 @@ public struct OptionsView: View {
         VStack {
             TextFieldWithValidator( title: "Port Number",
                                     value: self.$Port, checker: $validPort ) { v in
-                                        // validation closure where ‘v’ is the current value
-                                        if( v.isEmpty || v < "80" ) {
-                                            return "Invalid Port"
-                                        }
-                                        return nil
+                // validation closure where ‘v’ is the current value
+                if( v.isEmpty || v < "80" ) {
+                    return "Invalid Port"
+                }
+                return nil
             }
             .frame(height: 40)
             .padding([.leading, .trailing])
@@ -141,11 +155,11 @@ public struct OptionsView: View {
         VStack {
             SecureFieldWithValidator( title: "Device Key",
                                       value: self.$Key, checker: $validKey ) { v in
-                                        // validation closure where ‘v’ is the current value
-                                        if( v.isEmpty ) {
-                                            return "Key cannot be empty"
-                                        }
-                                        return nil
+                // validation closure where ‘v’ is the current value
+                if( v.isEmpty ) {
+                    return "Key cannot be empty"
+                }
+                return nil
             }
             .frame(height: 40)
             .padding([.leading, .trailing])
@@ -163,8 +177,9 @@ public struct OptionsView: View {
     func LogEntries() -> some View {
         VStack {
             Picker(selection: self.$LogRowIdx, label: Text("Log Entries")) {
-                ForEach(0 ..< self.config.deviceList[index].LogRowsPickList.count) {
-                    Text(self.config.deviceList[self.index].LogRowsPickList[$0])
+                //                ForEach(0 ..< self.config.deviceList[index].LogRowsPickList.count) {
+                ForEach(0 ..< self.device.LogRowsPickList.count) {
+                    Text(self.device.LogRowsPickList[$0])
                 }
             }
             .frame(height: 40)

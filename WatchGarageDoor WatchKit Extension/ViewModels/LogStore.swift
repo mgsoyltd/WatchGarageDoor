@@ -15,8 +15,9 @@ class LogStore : ObservableObject {
     
     @Published var doorLog: [GarageDoorLog] = []
     @Published var changeStatus: ResultModel = ResultModel()
-    public var didChange = PassthroughSubject<LogStore, Never>()
     
+    public var willChange = PassthroughSubject<LogStore, Never>()
+    public var didChange = PassthroughSubject<LogStore, Never>()
     
     /// Read device status log using Web Service
     /// - Parameters:
@@ -29,7 +30,7 @@ class LogStore : ObservableObject {
         #endif
 
         let showLogService = ServiceRequest.showLog
-        let request = RequestObject(method: "GET", path: url.absoluteString, params: nil, service: showLogService, log: false)
+        let request = RequestObject(method: "GET", path: url.absoluteString, params: nil, service: showLogService, log: false)    
         var log = FormattedLog(name: nil, time: nil, logs: nil)
         
         self.doorLog.removeAll()
@@ -70,7 +71,8 @@ class LogStore : ObservableObject {
                                                                 let logEntry = GarageDoorLog(doorStatus: $0.doorStatus, timeStamp: $0.timeStamp, distanceMM: String($0.distanceMM), imageName: imageName)
                                                                 self.doorLog.append(logEntry)
                                                             }
-                                                            self.didChange.send(self)
+                                                            
+                                                            self.willChange.send(self)
                                                         }
                                                         
                                                     case .failure(let error):
@@ -80,7 +82,8 @@ class LogStore : ObservableObject {
                                                             #endif
                                                             self.changeStatus.error = true
                                                             self.changeStatus.alert = ErrorDesc(error: error)
-                                                            self.didChange.send(self)
+                                                            
+                                                            self.willChange.send(self)
                                                         }
                                                     }
         })

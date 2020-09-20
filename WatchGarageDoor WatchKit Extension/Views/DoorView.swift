@@ -51,26 +51,26 @@ struct DoorView: View {
                                 self.timeLeft = 0
                                 self.fadeOut = true
                                 self.commandVC = false      // Dismiss this view
-                        }
-                        .onReceive(timer) { _ in
-                            if self.timeLeft > 0 {
-                                self.timeLeft -= 1
-                                if self.isEven(Int(self.timeLeft)) {
-                                    self.imageIndex += self.imageStep
-                                    if self.imageIndex > 0 && self.imageIndex <= self.imageCount {
-                                        self.img = "\(self.imagePrefix)\(String(self.imageIndex))"
+                            }
+                            .onReceive(timer) { _ in
+                                if self.timeLeft > 0 {
+                                    self.timeLeft -= 1
+                                    if self.isEven(Int(self.timeLeft)) {
+                                        self.imageIndex += self.imageStep
+                                        if self.imageIndex > 0 && self.imageIndex <= self.imageCount {
+                                            self.img = "\(self.imagePrefix)\(String(self.imageIndex))"
+                                        }
                                     }
                                 }
+                                if self.timeLeft == 0 {
+                                    self.fadeOut = true
+                                    self.commandVC = false      // Dismiss this view
+                                }
                             }
-                            if self.timeLeft == 0 {
-                                self.fadeOut = true
-                                self.commandVC = false      // Dismiss this view
-                            }
-                        }
                     }
                 } // ZStack
             } // VStack
-                .navigationBarTitle(titleBar)
+            .navigationBarTitle(titleBar)
             
             if self.cmdError {
                 // Controller error
@@ -100,15 +100,15 @@ struct DoorView: View {
                 self.timeLeft = 12.0     // Start animation
             }
         }
-            
+        
         .alert(isPresented: self.$showAlert) {
             Alert(title: Text("\(self.status.cmdText) \(self.status.name)"),
                   message: Text("Are you sure?"),
                   primaryButton: .destructive(Text(self.status.cmdText)) {
                     self.doCommand()
-                }, secondaryButton: .cancel {
+                  }, secondaryButton: .cancel {
                     self.commandVC = false      // Dismiss this view
-                }
+                  }
             )
         }
         

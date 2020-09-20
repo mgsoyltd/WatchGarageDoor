@@ -1,11 +1,11 @@
 #  WatchGarageDoor
 
-**Version 1.0.1**
+**Version 1.1.0**
 
 ## Garage doors in wrist
 
 With this application, you can conveniently control your garage doors from your wrist.
-Made for Apple Watch Series 4 or later with WatchOS 6.2 or later and runs independently without a companion app on iOS.
+Made for Apple Watch Series 4 or later with WatchOS 7.0 or later and runs independently without a companion app on iOS.
 
 This application requires you to own a third-party [OpenGarage](http://opengarage.io) controller that is already setup and working in your local Wifi network.
 Other controllers are not supported!
@@ -20,15 +20,19 @@ Other controllers are not supported!
 
 Please, see the product page at [https://www.mgsoy.com/Products/](https://www.mgsoy.com/Products/)
 
+### Requirements
+
+In order to build this project you will need Xcode 12.0 or later and the Deployment Target must be set to WatchOS 7.0.
+
 ### Device Setup
 
 When the device list is empty, you will see "Please, add a device" prompt.
-Or you want to add another device, then force press on the device list  to open a context menu and 
+Or you want to add another device, then select Setup on the toolbar to open a setup menu and 
 select New device to maintain its parameters (device name, IP address, Port, Device key (only needed for opening and closing), 
 number of log entries to show etc.). Once you save the settings, you should see the information about the new device.
 
 If you want to change the device settings, tap the device on the device list to select it and see its status log.
-On the status log list, force press to open a context menu for the selected device and select Settings to edit.
+On the status log list, select Options toolbar command to open an options menu for the selected device and select Settings to edit.
 
 
 ## License & copyright

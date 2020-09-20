@@ -18,7 +18,7 @@ struct AboutView: View {
                 .foregroundColor(.yellow)
             Text("v\(getAppVersion()) (\(getBuildVersion()))")
                 .font(.footnote)
-                .foregroundColor(.accentColor)
+                .foregroundColor(.green)
             Divider()
             Text("Copyright © 2020")
                 .font(.footnote)

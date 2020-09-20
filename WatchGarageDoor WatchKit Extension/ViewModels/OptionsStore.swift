@@ -14,6 +14,8 @@ import Combine
 class OptionsStore : ObservableObject {
     
     public var didChange = PassthroughSubject<OptionsStore, Never>()
+    public var willChange = PassthroughSubject<OptionsStore, Never>()
+    
     @Published var doorOptions = GarageDoorOptions()
     @Published var changeStatus: ResultModel = ResultModel()
     
@@ -72,7 +74,7 @@ class OptionsStore : ObservableObject {
                                                                 self.doorOptions.subn = String(opts.subn)
                                                                 self.doorOptions.dns1 = String(opts.dns1)
                                                                 
-                                                                self.didChange.send(self)
+                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                             
@@ -83,7 +85,8 @@ class OptionsStore : ObservableObject {
                                                                 #endif
                                                                 self.changeStatus.error = true
                                                                 self.changeStatus.alert = ErrorDesc(error: error)
-                                                                self.didChange.send(self)
+                                                                
+                                                                self.willChange.send(self)
                                                             }
                                                         }
         })

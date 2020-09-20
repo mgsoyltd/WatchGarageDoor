@@ -13,7 +13,6 @@ import Foundation
 import SwiftUI
 
 class HostingController: WKHostingController<AnyView> {
-    
     override var body: AnyView {
         AnyView(DeviceListView().environmentObject(Config()))
     }

@@ -12,8 +12,9 @@ import SwiftUI
 import Combine
 
 class StatusStore : ObservableObject {
-    
+        
     public var didChange = PassthroughSubject<StatusStore, Never>()
+    public var willChange = PassthroughSubject<StatusStore, Never>()
     
     @Published var doorStatus   = GarageDoorStatus()
     @Published var changeStatus = ResultModel()
@@ -28,8 +29,7 @@ class StatusStore : ObservableObject {
         #endif
         
         let service = ServiceRequest.getVariables
-        let request = RequestObject(method: "GET", path: url.absoluteString, params:
-            nil, service: service, log: false)
+        let request = RequestObject(method: "GET", path: url.absoluteString, params: nil, service: service, log: false)   
         
         // Get controller variables
         WebService (requestObject: request).decoded(Variables.self,
@@ -61,7 +61,7 @@ class StatusStore : ObservableObject {
                                                                 self.doorStatus.cmdText =
                                                                     stat.door == 0 ? "Open" : "Close"
                                                                 
-                                                                self.didChange.send(self)
+                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                             
@@ -73,7 +73,7 @@ class StatusStore : ObservableObject {
                                                                 self.changeStatus.error = true
                                                                 self.changeStatus.alert = ErrorDesc(error: error)
                                                                 
-                                                                self.didChange.send(self)
+                                                                self.willChange.send(self)
                                                             }
                                                         }
         })

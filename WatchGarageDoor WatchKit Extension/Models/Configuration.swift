@@ -32,10 +32,10 @@ struct Configuration<T: Codable> {
         }
         set {
             // Convert newValue to data
-            let data = try? JSONEncoder().encode(newValue)
-            
-            // Set value to UserDefaults
-            UserDefaults.standard.set(data, forKey: key)
+            if let data = try? JSONEncoder().encode(newValue) {
+                // Set value to UserDefaults
+                UserDefaults.standard.set(data, forKey: key)
+            }
         }
     }
 }

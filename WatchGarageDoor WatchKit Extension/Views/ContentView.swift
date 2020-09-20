@@ -13,20 +13,17 @@ struct ContentView: View {
     
     @EnvironmentObject var config: Config
     
-    @ObservedObject var statusModel  = StatusStore()
-    @ObservedObject var optionsModel = OptionsStore()
-    @ObservedObject var logModel     = LogStore()
+    @StateObject var statusModel  = StatusStore()
+    @StateObject var optionsModel = OptionsStore()
+    @StateObject var logModel     = LogStore()
     
     @State var currentIndex        = 0.0
-    @State private var optionsVC   = false
-    @State private var infoVC      = false
     @State private var validDevice = false
-    @State var commandVC           = false
     
-    var doorLog: [GarageDoorLog] = []
+    @State private var moreVC = false
     
     var body: some View {
-        ZStack {
+        VStack {
             Section {
                 List(logModel.doorLog) { log in
                     HStack {
@@ -36,15 +33,22 @@ struct ContentView: View {
                         Text(log.timeStamp)
                     }
                 }
-                .onAppear(perform: {
-                    // Request the status log data from the device
-                    self.fetchLog(index: self.index)
-                })
-  
-                .onReceive(self.statusModel.didChange) { value in
-                    self.validDevice = ( self.statusModel.doorStatus.mac != "" )
-                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Button("Options") {
+                        self.moreVC.toggle()
+                    }
+                }
+            }
+            .sheet(isPresented: $moreVC) {                
+                OptionsMenuView(index: self.index,
+                                validDevice: self.validDevice,
+                                doorStatus: self.statusModel.doorStatus,
+                                optionsModel: self.optionsModel)
+                    .environmentObject(config)
+            }
+            
             // Possible error messages
             Text(self.logModel.changeStatus.alert)
                 .foregroundColor(.red)
@@ -59,59 +63,17 @@ struct ContentView: View {
             by: 1.0,
             sensitivity: .low
         )
-            .contextMenu {
-    
-                // Open/Close command
-                if self.validDevice {
-                    Button (action: {
-                        self.commandVC.toggle()
-                    }, label: {
-                        VStack {
-                            Image(systemName: self.statusModel.doorStatus.cmdButton)
-                            Text(self.statusModel.doorStatus.cmdText)
-                        }
-                    })
-                        .sheet(isPresented: self.$commandVC) {
-                            DoorView(index: self.index, status: self.statusModel.doorStatus, commandVC: self.$commandVC)
-                                .environmentObject(self.config)
-                    }
-                    
-                    // Info
-                    Button(action: {
-                        self.infoVC.toggle()
-                    }, label: {
-                        VStack{
-                            Image(systemName: "info")
-                                .font(.title)
-                            Text("Info")
-                        }
-                    })
-                    .sheet(isPresented: self.$infoVC) {
-                        Text(self.statusModel.doorStatus.name)
-                            .font(.headline)
-                            .foregroundColor(Color.blue)
-                        InfoView(options: self.optionsModel,
-                                 deviceMAC: self.$statusModel.doorStatus.mac, more: true)
-                        .navigationBarTitle("Close")
-                    }
-                }
-
-                // Maintain settings
-                Button(action: {
-                    self.optionsVC.toggle()
-                }, label: {
-                    VStack{
-                        Image(systemName: "gear")
-                            .font(.title)
-                        Text("Settings")
-                    }
-                })
-                .sheet(isPresented: self.$optionsVC) {
-                    OptionsView(index: self.index, device: self.config.deviceList[self.index])
-                        .environmentObject(self.config)
-                }
+        .edgesIgnoringSafeArea(.bottom)
+        
+        .onAppear(perform: {
+            // Request the status log data from the device
+            self.fetchLog(index: self.index)
+        })
+        
+        .onReceive(self.statusModel.willChange) { value in
+            self.validDevice = ( self.statusModel.doorStatus.mac != "" )
         }
-            .edgesIgnoringSafeArea(.bottom)
+        
     }
     
     private func fetchLog(index: Int) {

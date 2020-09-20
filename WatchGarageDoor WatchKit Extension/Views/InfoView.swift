@@ -10,31 +10,42 @@ import SwiftUI
 
 struct InfoView: View {
     var options: OptionsStore
-    @Binding var deviceMAC : String
+    var deviceMAC: String
     var more: Bool
+    var color: Color? = Color.gray
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
             Divider()
             Text("MAC: " + deviceMAC)
                 .font(.footnote)
-                .foregroundColor(.gray)
+                .foregroundColor(self.color)
             Text("Firmware: " + FWVersion(fwv: options.doorOptions.fwv ))
                 .font(.footnote)
-                .foregroundColor(.gray)
+                .foregroundColor(self.color)
             Text("WLAN: " + options.doorOptions.ssid)
                 .font(.footnote)
-                .foregroundColor(.gray)
+                .foregroundColor(self.color)
             Text("Gateway: " + options.doorOptions.gwip)
                 .font(.footnote)
-                .foregroundColor(.gray)
+                .foregroundColor(self.color)
             if self.more {
                 Text("Subnet: " + options.doorOptions.subn)
                     .font(.footnote)
-                    .foregroundColor(.gray)
+                    .foregroundColor(self.color)
                 Text("DNS1: " + options.doorOptions.dns1)
                     .font(.footnote)
-                    .foregroundColor(.gray)
+                    .foregroundColor(self.color)
+            }
+        } // VStack
+        
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction ) {
+                Button("Done") {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
             }
         }
     }
@@ -57,7 +68,7 @@ func FWVersion(fwv: Int) -> String {
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
         InfoView(options: OptionsStore(),
-                 deviceMAC : .constant("2b:cc:4e:56:6b:90"), more: true)
+                 deviceMAC: "2b:cd:4e:57:77:90", more: true)
     }
 }
 
