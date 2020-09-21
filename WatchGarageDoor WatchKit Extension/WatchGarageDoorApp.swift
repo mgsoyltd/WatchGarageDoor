@@ -10,14 +10,20 @@ import SwiftUI
 
 @main
 struct WatchGarageDoorApp: App {
+    
+    @Environment(\.scenePhase) var scenePhase
+    @StateObject var config = Config()
         
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                DeviceListView().environmentObject(Config())
+                DeviceListView().environmentObject(config)
             }
         }
+        .onChange(of: scenePhase) { phase in
+            config.isAppActive = (phase != .background)
+        }
         
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
+    
 }

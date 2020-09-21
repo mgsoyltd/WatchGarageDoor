@@ -15,21 +15,7 @@ final class Config : ObservableObject {
     public var willChange = PassthroughSubject<Config, Never>()
     public var didChange = PassthroughSubject<Config, Never>()
     
-//    // For displaying the Welcome screen
-//    @Configuration(key: "firstLaunch", defaultValue: Date())
-//    var firstLaunch: Date {
-//        didSet {
-//            self.didChange.send(self)
-//        }
-//    }
-//
-//    // For displaying the Welcome screen
-//    @Configuration(key: "lastVersion", defaultValue: String())
-//    var lastVersion: String {
-//        didSet {
-//            self.didChange.send(self)
-//        }
-//    }
+    public var isAppActive = true
     
     // For displaying more info per device on the device list
     @Configuration(key: "showInfoOnList", defaultValue: true)
@@ -49,7 +35,7 @@ final class Config : ObservableObject {
             self.didChange.send(self)
         }
     }
-        
+    
     func getDevice(_ id: UUID) -> DeviceModel? {
         if let idx = self.deviceList.firstIndex(where: { $0.id == id }) {
             return self.deviceList[idx]
