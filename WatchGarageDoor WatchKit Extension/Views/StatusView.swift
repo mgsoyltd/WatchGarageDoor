@@ -16,6 +16,7 @@ struct StatusView: View {
     
     @StateObject var statusModel  = StatusStore()
     @StateObject var optionsModel = OptionsStore()
+    @StateObject var controlModel = Controller()
     
     @State var optChanged = false
     
@@ -64,6 +65,11 @@ struct StatusView: View {
         .onAppear {
             self.reload()
         }
+        .onReceive(self.config.appActive) { _ in
+            if self.config.isAppActive {
+                self.reload()
+            }
+        }
         .onReceive(self.statusModel.willChange) { _ in
             // Primarily use the name from the device 
             if self.index < self.config.deviceList.count &&
@@ -74,7 +80,10 @@ struct StatusView: View {
         .onReceive(self.optionsModel.willChange) { _ in
             optChanged = true
         }
-        
+        .onReceive(self.controlModel.willChange) { value in
+            // Door opened or closed
+            self.reload()
+        }
     }
     
     private func reload() {

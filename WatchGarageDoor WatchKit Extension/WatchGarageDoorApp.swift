@@ -13,7 +13,7 @@ struct WatchGarageDoorApp: App {
     
     @Environment(\.scenePhase) var scenePhase
     @StateObject var config = Config()
-        
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -21,7 +21,9 @@ struct WatchGarageDoorApp: App {
             }
         }
         .onChange(of: scenePhase) { phase in
-            config.isAppActive = (phase != .background)
+            config.isAppActive       = (phase == .active)
+            config.isAppInactive     = (phase == .inactive)
+            config.isAppInBackground = (phase == .background)
         }
         
     }

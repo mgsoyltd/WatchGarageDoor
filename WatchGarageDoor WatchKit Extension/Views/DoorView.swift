@@ -15,7 +15,9 @@ struct DoorView: View {
     
     @EnvironmentObject var config: Config
     
-    @ObservedObject var controlModel = Controller()
+    @StateObject var controlModel = Controller()
+    
+    @Environment(\.presentationMode) var presentationMode
     
     @State private var timeLeft: CGFloat = 0
     @State private var fadeOut     = true
@@ -43,15 +45,16 @@ struct DoorView: View {
                             .opacity(fadeOut ? 0 : 1)
                             .animation(.easeInOut(duration: 5.0))
                             .transition(.asymmetric(insertion: .opacity, removal: .opacity))
-                            .onReceive(timer) { _ in
-                                if (!config.isAppActive) {
+                            .onReceive(self.config.appInBackground) { _ in
+                                if self.config.isAppInBackground {
                                     #if DEBUG
                                     print("App in the background - stop animation")
                                     #endif
                                     self.timeLeft = 0
-                                    self.fadeOut = true
-                                    self.commandVC = false      // Dismiss this view
                                 }
+                                
+                            }
+                            .onReceive(timer) { _ in
                                 if self.timeLeft > 0 {
                                     self.timeLeft -= 1
                                     if self.isEven(Int(self.timeLeft)) {
@@ -70,7 +73,14 @@ struct DoorView: View {
                     }
                 } // ZStack
             } // VStack
-            .navigationBarTitle(titleBar)
+            
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction ) {
+                    Button(titleBar) {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                }
+            }
             
             if self.cmdError {
                 // Controller error
@@ -79,7 +89,7 @@ struct DoorView: View {
                     .foregroundColor(.red)
             }
         }
-        .onReceive(self.controlModel.didChange) { value in
+        .onReceive(self.controlModel.willChange) { value in
             self.cmdError = self.controlModel.changeStatus.error
             if self.cmdError {
                 self.titleBar = "Close"

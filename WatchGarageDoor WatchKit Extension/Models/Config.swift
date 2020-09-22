@@ -12,10 +12,54 @@ import Combine
 
 final class Config : ObservableObject {
     
-    public var willChange = PassthroughSubject<Config, Never>()
-    public var didChange = PassthroughSubject<Config, Never>()
+    private var appActiveStatus = false
+    private var appInactiveStatus = false
+    private var appInBackgroundStatus = false
     
-    public var isAppActive = true
+    public var willChange      = PassthroughSubject<Config, Never>()
+    public var didChange       = PassthroughSubject<Config, Never>()
+    public var appActive       = PassthroughSubject<Config, Never>()
+    public var appInactive     = PassthroughSubject<Config, Never>()
+    public var appInBackground = PassthroughSubject<Config, Never>()
+    
+    public var isAppActive: Bool {
+        set {
+            appActiveStatus = newValue
+            self.appActive.send(self)
+            #if DEBUG
+            print("App is Active")
+            #endif
+        }
+        get {
+            return appActiveStatus
+        }
+    }
+    
+    public var isAppInactive: Bool {
+        set {
+            appInactiveStatus = newValue
+            self.appInactive.send(self)
+            #if DEBUG
+            print("App is Inactive")
+            #endif
+        }
+        get {
+            return appInactiveStatus
+        }
+    }
+    
+    public var isAppInBackground: Bool {
+        set {
+            appInBackgroundStatus = newValue
+            self.appInBackground.send(self)
+            #if DEBUG
+            print("App is In Background")
+            #endif
+        }
+        get {
+            return appInBackgroundStatus
+        }
+    }
     
     // For displaying more info per device on the device list
     @Configuration(key: "showInfoOnList", defaultValue: true)
