@@ -19,7 +19,7 @@ Other controllers are not supported!
 - Maintain settings for controllers
 - Edit device list of controllers (move or delete)
 
-Please, see the product page at [https://www.mgsoy.com/Products/](https://www.mgsoy.com/Products/)
+Please, see the product page at [https://www.mgsoy.com/](https://www.mgsoy.com/)
 
 ### Requirements
 
@@ -44,7 +44,7 @@ On the status log list, select Options toolbar command to open an options menu f
 
 ## License & copyright
 
-© 2020-2021 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/Products/)
+© 2020-2021 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
 
 MIT License
 
