@@ -1,6 +1,6 @@
 #  WatchGarageDoor
 
-**Version 1.1.0**
+**Version 1.1.1**
 
 ## Garage doors in wrist
 
