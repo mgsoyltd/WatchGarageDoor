@@ -21,7 +21,7 @@ Other controllers are not supported!
 
 Please, see the product page at [https://www.mgsoy.com/](https://www.mgsoy.com/)
 
-### Requirements
+### Requirements  
 
 In order to build this project you will need Xcode 13.0 or later and the Deployment Target must be set to WatchOS 8.0.
 
