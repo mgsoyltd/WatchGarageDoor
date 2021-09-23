@@ -40,6 +40,7 @@ On the status log list, select Options toolbar command to open an options menu f
 - watchOS 8.0 support added
 - Changed the device list background color to black
 
+
 ## License & copyright
 
 © 2020-2021 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
