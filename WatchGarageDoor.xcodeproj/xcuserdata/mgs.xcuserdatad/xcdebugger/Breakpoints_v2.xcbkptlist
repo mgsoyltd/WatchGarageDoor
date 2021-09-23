@@ -306,6 +306,68 @@
             endingLineNumber = "155"
             landmarkName = "decoded(_:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "90D8B187-659E-4F33-9056-186A0A220730 - 63721323df507e9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;WatchGarageDoor_WatchKit_Extension.Log&gt; of closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchGarageDoor_WatchKit_Extension.WebService.decoded&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, WatchGarageDoor_WatchKit_Extension.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WatchGarageDoor WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mgs/Documents/Documents%20-%20Mac%20Pro/dev/WatchGarageDoor/WatchGarageDoor%20WatchKit%20Extension/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "2884">
+               </Location>
+               <Location
+                  uuid = "90D8B187-659E-4F33-9056-186A0A220730 - 2dd8bc2757333046"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;WatchGarageDoor_WatchKit_Extension.ChangeVariables&gt; of closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchGarageDoor_WatchKit_Extension.WebService.decoded&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, WatchGarageDoor_WatchKit_Extension.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WatchGarageDoor WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mgs/Documents/Documents%20-%20Mac%20Pro/dev/WatchGarageDoor/WatchGarageDoor%20WatchKit%20Extension/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "2868">
+               </Location>
+               <Location
+                  uuid = "90D8B187-659E-4F33-9056-186A0A220730 - 81ab50fe55442467"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;WatchGarageDoor_WatchKit_Extension.Variables&gt; of closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchGarageDoor_WatchKit_Extension.WebService.decoded&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, WatchGarageDoor_WatchKit_Extension.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WatchGarageDoor WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mgs/Documents/Documents%20-%20Mac%20Pro/dev/WatchGarageDoor/WatchGarageDoor%20WatchKit%20Extension/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "3124">
+               </Location>
+               <Location
+                  uuid = "90D8B187-659E-4F33-9056-186A0A220730 - 519f77580065cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;WatchGarageDoor_WatchKit_Extension.Options&gt; of closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WatchGarageDoor_WatchKit_Extension.WebService.decoded&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, WatchGarageDoor_WatchKit_Extension.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WatchGarageDoor WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mgs/Documents/Documents%20-%20Mac%20Pro/dev/WatchGarageDoor/WatchGarageDoor%20WatchKit%20Extension/Services/WebService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "3236">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
