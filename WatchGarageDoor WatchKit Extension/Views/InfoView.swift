@@ -13,11 +13,17 @@ struct InfoView: View {
     var deviceMAC: String
     var more: Bool
     var color: Color? = Color.gray
+    var name: String? = nil
     
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
+            if name != nil {
+                Text(name!)
+                    .font(.headline)
+                    .foregroundColor(Color.blue)
+            }
             Divider()
             Text("MAC: " + deviceMAC)
                 .font(.footnote)

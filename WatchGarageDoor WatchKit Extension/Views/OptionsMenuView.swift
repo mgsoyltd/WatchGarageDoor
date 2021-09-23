@@ -17,7 +17,7 @@ struct OptionsMenuView: View {
     @EnvironmentObject var config: Config
     
     @Environment(\.presentationMode) var presentationMode
-        
+    
     @State private var optionsVC = false
     @State private var infoVC    = false
     @State var commandVC         = false
@@ -45,13 +45,11 @@ struct OptionsMenuView: View {
                     Label("Info", systemImage: "info")
                 }
                 .sheet(isPresented: self.$infoVC) {
-                    Text(self.doorStatus.name)
-                        .font(.headline)
-                        .foregroundColor(Color.blue)
                     InfoView(options: self.optionsModel,
                              deviceMAC: self.doorStatus.mac,
                              more: true,
-                             color: .green)
+                             color: .green,
+                             name: self.doorStatus.name)
                 }
             }
             

@@ -25,6 +25,7 @@ struct DeviceListView: View {
                         StatusView(index: index)
                             .environmentObject(config)
                     }
+                    .listRowBackground(Color.black)
                 }
             } // List
             .listStyle(CarouselListStyle())

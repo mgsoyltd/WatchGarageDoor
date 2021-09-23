@@ -28,6 +28,7 @@ struct DoorView: View {
     @State private var imagePrefix = "GarageDoorIcon_"
     @State private var cmdError    = false
     @State private var titleBar    = ""
+    @State private var animate = false
     
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let imageCount = 6
@@ -42,8 +43,8 @@ struct DoorView: View {
                             .frame(width: 200.0, height: 180.0)
                             .clipped(antialiased: true)
                             .cornerRadius(10.0)
-                            .opacity(fadeOut ? 0 : 1)
-                            .animation(.easeInOut(duration: 5.0))
+                            .opacity(fadeOut ? 0.0 : 1.0)
+                            .animation(.easeInOut(duration: 5.0), value: animate)
                             .transition(.asymmetric(insertion: .opacity, removal: .opacity))
                             .onReceive(self.config.appInBackground) { _ in
                                 if self.config.isAppInBackground {
@@ -69,6 +70,9 @@ struct DoorView: View {
                                     self.fadeOut = true
                                     self.commandVC = false      // Dismiss this view
                                 }
+                            }
+                            .onAppear() {
+                                animate = true
                             }
                     }
                 } // ZStack

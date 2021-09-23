@@ -16,6 +16,7 @@ struct EditView: View {
     
     @State private var showConfirm = false
     @State private var idxSet = IndexSet()
+    @State private var animate = false
     
     var body: some View {
         NavigationView {
@@ -30,7 +31,10 @@ struct EditView: View {
                 }
                 .onMove(perform: onMove)
                 .onDelete(perform: onDelete)
-                .animation(.easeOut)
+                .animation(.easeOut, value: animate)
+                .onAppear() {
+                    animate = true
+                }
             }
             
             .toolbar {

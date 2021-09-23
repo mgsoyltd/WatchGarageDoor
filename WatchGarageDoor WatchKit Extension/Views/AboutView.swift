@@ -20,7 +20,7 @@ struct AboutView: View {
                 .font(.footnote)
                 .foregroundColor(.green)
             Divider()
-            Text("Copyright © 2020")
+            Text("Copyright © 2020-2021")
                 .font(.footnote)
                 .foregroundColor(.gray)
             Text("All rights reserved.")
