@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8438D97026FCC94000D2862D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8438D96F26FCC94000D2862D /* .gitignore */; };
 		843A71B724E10FFE003EFCCD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 843A71B624E10FFE003EFCCD /* LICENSE */; };
 		8441E2682513C9B90073249F /* ListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E2672513C9B90073249F /* ListMenuView.swift */; };
 		8448D6A5251737C900CB4B62 /* OptionsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448D6A4251737C900CB4B62 /* OptionsMenuView.swift */; };
@@ -89,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8438D96F26FCC94000D2862D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		843A71B624E10FFE003EFCCD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8441E2672513C9B90073249F /* ListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuView.swift; sourceTree = "<group>"; };
 		8448D6A4251737C900CB4B62 /* OptionsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsMenuView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		84A54414247BBEF00029AA02 = {
 			isa = PBXGroup;
 			children = (
+				8438D96F26FCC94000D2862D /* .gitignore */,
 				84D5701924E127ED009A49DB /* FieldValidator */,
 				84A54423247BBEF00029AA02 /* WatchGarageDoor WatchKit App */,
 				84A54432247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */,
@@ -386,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8438D97026FCC94000D2862D /* .gitignore in Resources */,
 				843A71B724E10FFE003EFCCD /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
