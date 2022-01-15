@@ -23,7 +23,7 @@ Please, see the product page at [https://www.mgsoy.com/](https://www.mgsoy.com/)
 
 ### Requirements  
 
-In order to build this project you will need Xcode 13.0 or later and the Deployment Target must be set to WatchOS 8.0.
+In order to build this project you will need Xcode 13.0 or later and the Deployment Target must be set to WatchOS 8.0.<br/>
 OpenGarage Firmware API versions 1.1.0 thru 1.1.1 supported.
 
 ### Device Setup
