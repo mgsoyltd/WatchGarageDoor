@@ -24,6 +24,7 @@ Please, see the product page at [https://www.mgsoy.com/](https://www.mgsoy.com/)
 ### Requirements  
 
 In order to build this project you will need Xcode 13.0 or later and the Deployment Target must be set to WatchOS 8.0.
+OpenGarage Firmware API versions 1.1.0 thru 1.1.1 supported.
 
 ### Device Setup
 
@@ -42,7 +43,7 @@ On the status log list, select Options toolbar command to open an options menu f
 
 ## License & copyright
 
-© 2020-2021 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
+© 2020-2022 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
 
 MIT License
 
