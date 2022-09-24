@@ -1,6 +1,6 @@
 #  WatchGarageDoor
 
-**Version 1.2.0**
+**Version 1.3.0**
 
 ## Garage doors in wrist
 
@@ -12,7 +12,7 @@ Other controllers are not supported!
 
 ### Features
 
-- watchOS 8.0 supported
+- watchOS 9.0 supported
 - Control multiple garage door controllers
 - Open and close the selected garage door
 - Review status log for open/close actions
@@ -23,7 +23,7 @@ Please, see the product page at [https://www.mgsoy.com/](https://www.mgsoy.com/)
 
 ### Requirements  
 
-In order to build this project you will need Xcode 13.0 or later and the Deployment Target must be set to WatchOS 8.0.<br/>
+In order to build this project you will need Xcode 14.0 or later and the Deployment Target must be set to WatchOS 9.0.<br/>
 OpenGarage Firmware API versions 1.1.0 thru 1.1.1 supported.
 
 ### Device Setup
@@ -38,8 +38,7 @@ On the status log list, select Options toolbar command to open an options menu f
 
 ### Release Notes
 
-- watchOS 8.0 support added
-- Changed the device list background color to black  
+- watchOS 9.0 support added
 
 ## License & copyright
 
