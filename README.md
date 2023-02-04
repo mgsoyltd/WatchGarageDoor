@@ -42,7 +42,7 @@ On the status log list, select Options toolbar command to open an options menu f
 
 ## License & copyright
 
-© 2020-2022 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
+© 2020-2023 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
 
 MIT License
 
