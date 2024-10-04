@@ -1,6 +1,6 @@
-#  WatchGarageDoor
+# WatchGarageDoor
 
-**Version 1.3.0**
+**Version 1.5.0**
 
 ## Garage doors in wrist
 
@@ -12,25 +12,23 @@ Other controllers are not supported!
 
 ### Features
 
-- watchOS 9.0 supported
+- watchOS 11.0 supported
 - Control multiple garage door controllers
 - Open and close the selected garage door
 - Review status log for open/close actions
 - Maintain settings for controllers
 - Edit device list of controllers (move or delete)
 
-Please, see the product page at [https://www.mgsoy.com/](https://www.mgsoy.com/)
+### Requirements
 
-### Requirements  
-
-In order to build this project you will need Xcode 14.0 or later and the Deployment Target must be set to WatchOS 9.0.<br/>
+In order to build this project you will need Xcode 16.0 or later and the Deployment Target must be set to WatchOS 11.0.<br/>
 OpenGarage Firmware API versions 1.1.0 thru 1.1.1 supported.
 
 ### Device Setup
 
 When the device list is empty, you will see "Please, add a device" prompt.
-Or you want to add another device, then select Setup on the toolbar to open a setup menu and 
-select New device to maintain its parameters (device name, IP address, Port, Device key (only needed for opening and closing), 
+Or you want to add another device, then select Setup on the toolbar to open a setup menu and
+select New device to maintain its parameters (device name, IP address, Port, Device key (only needed for opening and closing),
 number of log entries to show etc.). Once you save the settings, you should see the information about the new device.
 
 If you want to change the device settings, tap the device on the device list to select it and see its status log.
@@ -38,11 +36,25 @@ On the status log list, select Options toolbar command to open an options menu f
 
 ### Release Notes
 
-- watchOS 9.0 support added
+- watchOS 11.0 support added
+
+### Screenshots
+
+<img src="Images/screen-1.png" width="200" />
+<img src="Images/screen-2.png" width="200" />
+<img src="Images/screen-3.png" width="200" />
+<img src="Images/screen-4.png" width="200" />
+<img src="Images/screen-5.png" width="200" />
+<img src="Images/screen-6.png" width="200" />
+<img src="Images/screen-7.png" width="200" />
+<img src="Images/screen-8.png" width="200" />
+<img src="Images/screen-9.png" width="200" />
+<img src="Images/screen-10.png" width="200" />
+<img src="Images/screen-11.png" width="200" />
 
 ## License & copyright
 
-© 2020-2023 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
+© 2020-2024 [Morning Glow Solutions Oy Ltd](https://www.mgsoy.com/)
 
 MIT License
 

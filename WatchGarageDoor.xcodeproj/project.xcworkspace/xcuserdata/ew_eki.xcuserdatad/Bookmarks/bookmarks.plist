@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>Timestamp</key>
+					<string>748552633.6273071</string>
+					<key>XcodeLocation</key>
+					<string>{"Selection":{"Editor":"Xcode3TargetEditor","Target":"WatchGarageDoor WatchKit App","Xcode3BuildPhasesEditorLocations":[{"00170a57502aa5789072d860f74a00d6c14dd45c04d2047b7d3a25d8249cedd6":[["00170a57502aa5789072d860f74a00d67d591a3a7ea3e5d3c2eab04b948829e6"]]}],"Xcode3TargetEditorLocations":[{"Selected Build Files":[["00170a57502aa5789072d860f74a00d67d591a3a7ea3e5d3c2eab04b948829e6"]]}]}}</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>WatchGarageDoor.xcodeproj</string>
+					</dict>
+				</dict>
+				<key>type</key>
+				<string>Xcode3ProjectDocumentLocation</string>
+			</dict>
+			<key>title</key>
+			<string>Error: Missing package product 'FieldValidator'</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>

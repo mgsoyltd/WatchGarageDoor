@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080480102C9DFB350056D05F /* FieldValidator in Frameworks */ = {isa = PBXBuildFile; productRef = 0804800F2C9DFB350056D05F /* FieldValidator */; };
 		8438D97026FCC94000D2862D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8438D96F26FCC94000D2862D /* .gitignore */; };
 		843A71B724E10FFE003EFCCD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 843A71B624E10FFE003EFCCD /* LICENSE */; };
 		8441E2682513C9B90073249F /* ListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8441E2672513C9B90073249F /* ListMenuView.swift */; };
@@ -15,7 +16,6 @@
 		84A54420247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 84A5441F247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84A54426247BBEF00029AA02 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A54424247BBEF00029AA02 /* Interface.storyboard */; };
 		84A54428247BBEF10029AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A54427247BBEF10029AA02 /* Assets.xcassets */; };
-		84A5442F247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84A54438247BBEF10029AA02 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A54437247BBEF10029AA02 /* ExtensionDelegate.swift */; };
 		84A5443E247BBEF10029AA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A5443D247BBEF10029AA02 /* Assets.xcassets */; };
 		84A54441247BBEF10029AA02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A54440247BBEF10029AA02 /* Preview Assets.xcassets */; };
@@ -55,27 +55,9 @@
 			remoteGlobalIDString = 84A5441E247BBEF00029AA02;
 			remoteInfo = "WatchGarageDoor WatchKit App";
 		};
-		84A54430247BBEF10029AA02 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84A54415247BBEF00029AA02 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84A5442D247BBEF10029AA02;
-			remoteInfo = "WatchGarageDoor WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		84A54449247BBEF10029AA02 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				84A5442F247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84A5444D247BBEF10029AA02 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,7 +83,6 @@
 		84A54425247BBEF00029AA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		84A54427247BBEF10029AA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A54429247BBEF10029AA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchGarageDoor WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A54437247BBEF10029AA02 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		84A5443D247BBEF10029AA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A54440247BBEF10029AA02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -134,19 +115,21 @@
 		84D5701924E127ED009A49DB /* FieldValidator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FieldValidator; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		080367502CB0254E003DE98C /* Images */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		846ACAD424E0ADF100AFDA91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84A5442B247BBEF10029AA02 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				84D5701B24E1299D009A49DB /* FieldValidator in Frameworks */,
+				080480102C9DFB350056D05F /* FieldValidator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +145,7 @@
 				84A54432247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */,
 				84A5441C247BBEF00029AA02 /* Products */,
 				848F070324DFFF9C00B9A9A5 /* README.md */,
+				080367502CB0254E003DE98C /* Images */,
 				843A71B624E10FFE003EFCCD /* LICENSE */,
 				84D5701224E125E6009A49DB /* Frameworks */,
 			);
@@ -172,7 +156,6 @@
 			children = (
 				84A5441B247BBEF00029AA02 /* WatchGarageDoor.app */,
 				84A5441F247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app */,
-				84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +279,9 @@
 			dependencies = (
 				84A54422247BBEF00029AA02 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				080367502CB0254E003DE98C /* Images */,
+			);
 			name = WatchGarageDoor;
 			packageProductDependencies = (
 			);
@@ -308,38 +294,17 @@
 			buildConfigurationList = 84A5444A247BBEF10029AA02 /* Build configuration list for PBXNativeTarget "WatchGarageDoor WatchKit App" */;
 			buildPhases = (
 				84A5441D247BBEF00029AA02 /* Resources */,
-				84A54449247BBEF10029AA02 /* Embed App Extensions */,
 				846ACAD424E0ADF100AFDA91 /* Frameworks */,
+				84A5442A247BBEF10029AA02 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				84A54431247BBEF10029AA02 /* PBXTargetDependency */,
 			);
 			name = "WatchGarageDoor WatchKit App";
 			productName = "WatchGarageDoor WatchKit App";
 			productReference = 84A5441F247BBEF00029AA02 /* WatchGarageDoor WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		84A5442D247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 84A54446247BBEF10029AA02 /* Build configuration list for PBXNativeTarget "WatchGarageDoor WatchKit Extension" */;
-			buildPhases = (
-				84A5442A247BBEF10029AA02 /* Sources */,
-				84A5442B247BBEF10029AA02 /* Frameworks */,
-				84A5442C247BBEF10029AA02 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WatchGarageDoor WatchKit Extension";
-			packageProductDependencies = (
-				84D5701A24E1299D009A49DB /* FieldValidator */,
-			);
-			productName = "WatchGarageDoor WatchKit Extension";
-			productReference = 84A5442E247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -347,8 +312,9 @@
 		84A54415247BBEF00029AA02 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "Morning Glow Solutions Oy Ltd";
 				TargetAttributes = {
 					84A5441A247BBEF00029AA02 = {
@@ -357,13 +323,9 @@
 					84A5441E247BBEF00029AA02 = {
 						CreatedOnToolsVersion = 11.5;
 					};
-					84A5442D247BBEF10029AA02 = {
-						CreatedOnToolsVersion = 11.5;
-					};
 				};
 			};
 			buildConfigurationList = 84A54418247BBEF00029AA02 /* Build configuration list for PBXProject "WatchGarageDoor" */;
-			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -373,13 +335,13 @@
 			mainGroup = 84A54414247BBEF00029AA02;
 			packageReferences = (
 			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 84A5441C247BBEF00029AA02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				84A5441A247BBEF00029AA02 /* WatchGarageDoor */,
 				84A5441E247BBEF00029AA02 /* WatchGarageDoor WatchKit App */,
-				84A5442D247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -399,16 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A54428247BBEF10029AA02 /* Assets.xcassets in Resources */,
-				84A54426247BBEF00029AA02 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		84A5442C247BBEF10029AA02 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				84A54441247BBEF10029AA02 /* Preview Assets.xcassets in Resources */,
 				84A5443E247BBEF10029AA02 /* Assets.xcassets in Resources */,
+				84A54426247BBEF00029AA02 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,11 +413,6 @@
 			isa = PBXTargetDependency;
 			target = 84A5441E247BBEF00029AA02 /* WatchGarageDoor WatchKit App */;
 			targetProxy = 84A54421247BBEF00029AA02 /* PBXContainerItemProxy */;
-		};
-		84A54431247BBEF10029AA02 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 84A5442D247BBEF10029AA02 /* WatchGarageDoor WatchKit Extension */;
-			targetProxy = 84A54430247BBEF10029AA02 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -515,6 +465,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -529,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -576,6 +527,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -584,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -594,107 +546,51 @@
 			};
 			name = Release;
 		};
-		84A54447247BBEF10029AA02 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchGarageDoor WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "WatchGarageDoor WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "WatchGarageDoor WatchKit Extension";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		84A54448247BBEF10029AA02 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchGarageDoor WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "WatchGarageDoor WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "WatchGarageDoor WatchKit Extension";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
 		84A5444B247BBEF10029AA02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				IBSC_MODULE = WatchGarageDoor_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchGarageDoor WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
 		84A5444C247BBEF10029AA02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				IBSC_MODULE = WatchGarageDoor_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchGarageDoor WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -704,8 +600,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.2.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -718,8 +614,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BF6XWF3PY;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.2.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgsoy.WatchGarageDoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -734,15 +630,6 @@
 			buildConfigurations = (
 				84A54444247BBEF10029AA02 /* Debug */,
 				84A54445247BBEF10029AA02 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		84A54446247BBEF10029AA02 /* Build configuration list for PBXNativeTarget "WatchGarageDoor WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84A54447247BBEF10029AA02 /* Debug */,
-				84A54448247BBEF10029AA02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -768,6 +655,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0804800F2C9DFB350056D05F /* FieldValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FieldValidator;
+		};
 		84D5701A24E1299D009A49DB /* FieldValidator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FieldValidator;
