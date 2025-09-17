@@ -32,7 +32,7 @@ public func getDate(unixdate: Int) -> String {
 //    print(dayTimePeriodFormatter.locale ?? "Invalid locale!")
     #endif
     let locale = Locale.current
-    if (locale.regionCode == nil || locale.regionCode == "") {
+    if (locale.region?.identifier == nil || locale.region?.identifier == "") {
         let userLanguages = Locale.preferredLanguages
         #if DEBUG
 //        print("User preferred lingos", userLanguages)
@@ -42,7 +42,7 @@ public func getDate(unixdate: Int) -> String {
                 let components = region.components(separatedBy: "-")
                 if (components.count == 2) {
                     let country = components[1]
-                    if let lingo = locale.languageCode {
+                    if let lingo = locale.language.languageCode?.identifier {
                         let locale_str = "\(lingo)_\(country)"
                         dayTimePeriodFormatter.locale = Locale(identifier: locale_str)
                         #if DEBUG
@@ -71,20 +71,25 @@ public func getDate(unixdate: Int) -> String {
 }
 
 protocol OptionalType {
-    var unsafelyUnwrapped: Any { get }
-    var unsafelyFlattened: Any { get }
+    var customUnwrapped: Any { get }
+    var customFlattened: Any { get }
 }
 
 extension Optional: OptionalType {
-    var unsafelyUnwrapped: Any { return self.unsafelyUnwrapped }
-    var unsafelyFlattened: Any { return (self.unsafelyUnwrapped as? OptionalType)?.unsafelyFlattened ?? self.unsafelyUnwrapped }
+    var customUnwrapped: Any {
+        if let value = self {
+            return value
+        }
+        fatalError("Found nil while unwrapping Optional")
+    }
+    var customFlattened: Any { return (self.customUnwrapped as? OptionalType)?.customFlattened ?? self.customUnwrapped }
 }
 
 public func stringFromAny(_ value:Any?) -> String {
     switch value {
     case .some(let wrapped):
-        if let notNil =  wrapped as? OptionalType, !(notNil.unsafelyFlattened is NSNull) {
-            return String(describing: notNil.unsafelyFlattened)
+        if let notNil =  wrapped as? OptionalType, !(notNil.customFlattened is NSNull) {
+            return String(describing: notNil.customFlattened)
         } else if !(wrapped is OptionalType) {
             return String(describing: wrapped)
         }

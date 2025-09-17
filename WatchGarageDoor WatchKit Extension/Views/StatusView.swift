@@ -70,17 +70,19 @@ struct StatusView: View {
                 self.reload()
             }
         }
-        .onReceive(self.statusModel.willChange) { _ in
-            // Primarily use the name from the device 
+        .onReceive(self.statusModel.$doorStatus) { doorStatus in
+            // Primarily use the name from the device
             if self.index < self.config.deviceList.count &&
-                self.statusModel.doorStatus.name != "" && self.statusModel.doorStatus.name != self.config.deviceList[self.index].name {
-                self.config.deviceList[self.index].name = self.statusModel.doorStatus.name
+                doorStatus.name != "" && doorStatus.name != self.config.deviceList[self.index].name {
+                var updatedDeviceList = self.config.deviceList
+                updatedDeviceList[self.index].name = doorStatus.name
+                self.config.deviceList = updatedDeviceList
             }
         }
-        .onReceive(self.optionsModel.willChange) { _ in
+        .onReceive(self.optionsModel.$doorOptions) { _ in
             optChanged = true
         }
-        .onReceive(self.controlModel.willChange) { value in
+        .onReceive(self.controlModel.$changeStatus) { _ in
             // Door opened or closed
             self.reload()
         }

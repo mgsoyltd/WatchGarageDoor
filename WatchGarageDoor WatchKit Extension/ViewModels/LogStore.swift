@@ -12,12 +12,9 @@ import SwiftUI
 import Combine
 
 class LogStore : ObservableObject {
-    
+
     @Published var doorLog: [GarageDoorLog] = []
     @Published var changeStatus: ResultModel = ResultModel()
-    
-    public var willChange = PassthroughSubject<LogStore, Never>()
-    public var didChange = PassthroughSubject<LogStore, Never>()
     
     /// Read device status log using Web Service
     /// - Parameters:
@@ -72,7 +69,6 @@ class LogStore : ObservableObject {
                                                                 self.doorLog.append(logEntry)
                                                             }
                                                             
-                                                            self.willChange.send(self)
                                                         }
                                                         
                                                     case .failure(let error):
@@ -83,7 +79,6 @@ class LogStore : ObservableObject {
                                                             self.changeStatus.error = true
                                                             self.changeStatus.alert = ErrorDesc(error: error)
                                                             
-                                                            self.willChange.send(self)
                                                         }
                                                     }
         })

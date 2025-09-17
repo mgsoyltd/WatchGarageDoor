@@ -16,8 +16,6 @@ final class Config : ObservableObject {
     private var appInactiveStatus = false
     private var appInBackgroundStatus = false
     
-    public var willChange      = PassthroughSubject<Config, Never>()
-    public var didChange       = PassthroughSubject<Config, Never>()
     public var appActive       = PassthroughSubject<Config, Never>()
     public var appInactive     = PassthroughSubject<Config, Never>()
     public var appInBackground = PassthroughSubject<Config, Never>()
@@ -63,22 +61,11 @@ final class Config : ObservableObject {
     
     // For displaying more info per device on the device list
     @Configuration(key: "showInfoOnList", defaultValue: true)
-    var showInfoOnList: Bool {
-        didSet {
-            self.didChange.send(self)
-        }
-    }
+    var showInfoOnList: Bool
     
     // Array of device objects
     @Configuration(key: "Devices", defaultValue: [DeviceModel]())
-    var deviceList: [DeviceModel] {
-        willSet {
-            self.willChange.send(self)
-        }
-        didSet {
-            self.didChange.send(self)
-        }
-    }
+    var deviceList: [DeviceModel]
     
     func getDevice(_ id: UUID) -> DeviceModel? {
         if let idx = self.deviceList.firstIndex(where: { $0.id == id }) {

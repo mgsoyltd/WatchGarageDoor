@@ -20,10 +20,10 @@ struct WatchGarageDoorApp: App {
                 DeviceListView().environmentObject(config)
             }
         }
-        .onChange(of: scenePhase) { phase in
-            config.isAppActive       = (phase == .active)
-            config.isAppInactive     = (phase == .inactive)
-            config.isAppInBackground = (phase == .background)
+        .onChange(of: scenePhase) { oldValue, newValue in
+            config.isAppActive       = (newValue == .active)
+            config.isAppInactive     = (newValue == .inactive)
+            config.isAppInBackground = (newValue == .background)
         }
         
     }

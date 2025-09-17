@@ -56,12 +56,12 @@ struct ContentView: View {
                 .padding(.bottom, 10)
         }
         .navigationBarTitle("Status Log")
-        .digitalCrownRotation(
-            $currentIndex.animation(),
-            from: 0.0,
-            through: Double(logModel.doorLog.count - 1),
-            by: 1.0,
-            sensitivity: .low
+        .modifier(
+            ConditionalDigitalCrownModifier(
+                isEnabled: logModel.doorLog.count > 1,
+                binding: $currentIndex,
+                maxValue: Double(logModel.doorLog.count - 1)
+            )
         )
         .edgesIgnoringSafeArea(.bottom)
         
@@ -70,8 +70,8 @@ struct ContentView: View {
             self.fetchLog(index: self.index)
         })
         
-        .onReceive(self.statusModel.willChange) { value in
-            self.validDevice = ( self.statusModel.doorStatus.mac != "" )
+        .onReceive(self.statusModel.$doorStatus) { doorStatus in
+            self.validDevice = ( doorStatus.mac != "" )
         }
         
     }
@@ -86,6 +86,27 @@ struct ContentView: View {
         self.optionsModel.fetch(url: self.config.deviceList[self.index].getURL())
     }
     
+}
+
+struct ConditionalDigitalCrownModifier: ViewModifier {
+    let isEnabled: Bool
+    let binding: Binding<Double>
+    let maxValue: Double
+
+    func body(content: Content) -> some View {
+        if isEnabled && maxValue > 0 {
+            content
+                .digitalCrownRotation(
+                    binding.animation(),
+                    from: 0.0,
+                    through: maxValue,
+                    by: 1.0,
+                    sensitivity: .low
+                )
+        } else {
+            content
+        }
+    }
 }
 
 #if DEBUG

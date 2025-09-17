@@ -178,8 +178,8 @@ public struct OptionsView: View {
         VStack {
             Picker(selection: self.$LogRowIdx, label: Text("Log Entries")) {
                 //                ForEach(0 ..< self.config.deviceList[index].LogRowsPickList.count) {
-                ForEach(0 ..< self.device.LogRowsPickList.count) {
-                    Text(self.device.LogRowsPickList[$0])
+                ForEach(Array(self.device.LogRowsPickList.enumerated()), id: \.offset) { index, item in
+                    Text(item)
                 }
             }
             .frame(height: 40)

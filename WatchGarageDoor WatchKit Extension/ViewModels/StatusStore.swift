@@ -12,9 +12,6 @@ import SwiftUI
 import Combine
 
 class StatusStore : ObservableObject {
-        
-    public var didChange = PassthroughSubject<StatusStore, Never>()
-    public var willChange = PassthroughSubject<StatusStore, Never>()
     
     @Published var doorStatus   = GarageDoorStatus()
     @Published var changeStatus = ResultModel()
@@ -61,7 +58,6 @@ class StatusStore : ObservableObject {
                                                                 self.doorStatus.cmdText =
                                                                     stat.door == 0 ? "Open" : "Close"
                                                                 
-                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                             
@@ -73,7 +69,6 @@ class StatusStore : ObservableObject {
                                                                 self.changeStatus.error = true
                                                                 self.changeStatus.alert = ErrorDesc(error: error)
                                                                 
-                                                                self.willChange.send(self)
                                                             }
                                                         }
         })

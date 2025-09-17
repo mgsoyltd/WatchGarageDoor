@@ -93,8 +93,8 @@ struct DoorView: View {
                     .foregroundColor(.red)
             }
         }
-        .onReceive(self.controlModel.willChange) { value in
-            self.cmdError = self.controlModel.changeStatus.error
+        .onReceive(self.controlModel.$changeStatus) { changeStatus in
+            self.cmdError = changeStatus.error
             if self.cmdError {
                 self.titleBar = "Close"
             }

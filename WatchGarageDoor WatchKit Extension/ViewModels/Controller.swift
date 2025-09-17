@@ -25,11 +25,8 @@ import SwiftUI
 import Combine
 
 class Controller : ObservableObject {
-    
+
     @Published var changeStatus: ResultModel = ResultModel()
-    
-    public var willChange = PassthroughSubject<Controller, Never>()
-    public var didChange = PassthroughSubject<Controller, Never>()
     
     func send(url: URL, args: String) {
         // Send change request
@@ -56,7 +53,6 @@ class Controller : ObservableObject {
                                                                 self.changeStatus.error = false
                                                                 self.changeStatus.alert = ""
                                                                 
-                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                             
@@ -65,7 +61,6 @@ class Controller : ObservableObject {
                                                                 self.changeStatus.error = true
                                                                 self.changeStatus.alert = ErrorDesc(error: error)
                                                                 
-                                                                self.willChange.send(self)
                                                             }
                                                             break
                                                         }
