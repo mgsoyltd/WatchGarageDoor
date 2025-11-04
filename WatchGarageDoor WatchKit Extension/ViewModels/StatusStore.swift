@@ -5,7 +5,7 @@
 //  Created by mgs on 26.8.2019.
 //  Copyright © 2019 Morning Glow Solutions Oy Ltd. All rights reserved.
 //
-//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware docs/OGAPI1.1.0.pdf
+//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware docs/OGAPI1.2.3.pdf
 //
 
 import SwiftUI
@@ -43,10 +43,15 @@ class StatusStore : ObservableObject {
                                                                 self.doorStatus.vehicle = stat.vehicle
                                                                 self.doorStatus.rcnt = stat.rcnt
                                                                 self.doorStatus.fwv = String(stat.fwv)
-                                                                self.doorStatus.name = stat.name 
+                                                                self.doorStatus.name = stat.name
                                                                 self.doorStatus.mac = stat.mac
                                                                 self.doorStatus.cid = stat.cid
                                                                 self.doorStatus.rssi = stat.rssi
+                                                                self.doorStatus.sn2 = stat.sn2
+                                                                self.doorStatus.cld = stat.cld ?? 0
+                                                                self.doorStatus.clds = stat.clds ?? 0
+                                                                self.doorStatus.temp = stat.temp
+                                                                self.doorStatus.humid = stat.humid
                                                                 self.doorStatus.doorStatus =
                                                                     stat.door == 0 ? "Closed" : "Open  "
                                                                 self.doorStatus.vehicleStatus =

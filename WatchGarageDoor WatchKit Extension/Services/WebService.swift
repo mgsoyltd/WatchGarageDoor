@@ -5,7 +5,7 @@
 //  Created by mgs on 20.8.2019.
 //  Copyright © 2019 Morning Glow Solutions Oy Ltd. All rights reserved.
 //
-//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware/ and then docs/OGAPI1.1.2.pdf
+//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware/ and then docs/OGAPI1.2.3.pdf
 //
 
 import Foundation

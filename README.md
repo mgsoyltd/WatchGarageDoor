@@ -1,6 +1,6 @@
 # WatchGarageDoor
 
-**Version 1.6.0**
+**Version 2.0.0**
 
 ## Garage doors in wrist
 
@@ -12,6 +12,7 @@ Other controllers are not supported!
 
 ### Features
 
+- Added support for OpenGarage Firmware API version 1.2.3
 - watchOS 26.0 supported
 - Control multiple garage door controllers
 - Open and close the selected garage door
@@ -22,7 +23,7 @@ Other controllers are not supported!
 ### Requirements
 
 In order to build this project you will need Xcode 26.0 or later and the Deployment Target must be set to WatchOS 26.0.<br/>
-OpenGarage Firmware API versions 1.1.0 thru 1.1.1 supported.
+OpenGarage Firmware API versions 1.1.0 thru 1.1.2 and 1.2.3 supported.
 
 ### Device Setup
 

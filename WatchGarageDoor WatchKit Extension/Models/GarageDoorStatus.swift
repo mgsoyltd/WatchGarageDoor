@@ -5,7 +5,7 @@
 //  Created by mgs on 2.9.2019.
 //  Copyright © 2019 Morning Glow Solutions Oy Ltd. All rights reserved.
 //
-//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware docs/OGAPI1.1.0.pdf
+//  Please, see OpenGarage firmware API documentation at https://github.com/OpenGarage/OpenGarage-Firmware docs/OGAPI1.2.3.pdf
 //
 
 import SwiftUI
@@ -16,6 +16,11 @@ struct GarageDoorStatus : Identifiable {
     var fwv: String
     var name, mac: String
     var cid, rssi: Int
+    var sn2: Int?               // switch sensor value (optional)
+    var cld: Int                // cloud option (0:none; 1:Blynk; 2:OTC)
+    var clds: Int               // cloud connection status
+    var temp: Double?           // temperature reading in Celsius (optional)
+    var humid: Double?          // humidity reading in percentage (optional)
     var doorStatus: String
     var vehicleStatus: String
     var statusImage: String
@@ -24,7 +29,7 @@ struct GarageDoorStatus : Identifiable {
 
     static let DoorOpenImage = "GarageDoorOpen"
     static let DoorShutImage = "GarageDoorShut"
-    
+
     init(dist:Int? = nil,
          door:Int? = nil,
          vehicle:Int? = nil,
@@ -33,7 +38,12 @@ struct GarageDoorStatus : Identifiable {
          name:String? = nil,
          mac:String? = nil,
          cid:Int? = nil,
-         rssi:Int? = nil)
+         rssi:Int? = nil,
+         sn2:Int? = nil,
+         cld:Int? = nil,
+         clds:Int? = nil,
+         temp:Double? = nil,
+         humid:Double? = nil)
     {
         self.dist    = dist ?? 0
         self.door    = door ?? 0
@@ -44,6 +54,11 @@ struct GarageDoorStatus : Identifiable {
         self.mac     = mac ?? ""
         self.cid     = cid ?? 0
         self.rssi    = rssi ?? 0
+        self.sn2     = sn2
+        self.cld     = cld ?? 0
+        self.clds    = clds ?? 0
+        self.temp    = temp
+        self.humid   = humid
         self.doorStatus = self.door == 0 ? "Closed" : "Open  "
         self.vehicleStatus = self.vehicle == 0 ? "Absent" : "Present"
         self.statusImage = self.door == 0 ? GarageDoorStatus.DoorShutImage : GarageDoorStatus.DoorOpenImage
