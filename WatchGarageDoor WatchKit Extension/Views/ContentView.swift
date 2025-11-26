@@ -25,30 +25,36 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Section {
-                List(logModel.doorLog) { log in
-                    HStack {
-                        Image(log.imageName)
-                            .resizable()
-                            .frame(width: 50, height: 40, alignment: .leading)
-                        Text(log.timeStamp)
+                ScrollViewReader { proxy in
+                    List {
+                        // Options button at the top
+                        Button("Options") {
+                            self.moreVC.toggle()
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .cornerRadius(10)
+                        .id("optionsButton")
+
+                        // Status log entries
+                        ForEach(logModel.doorLog) { log in
+                            HStack {
+                                Image(log.imageName)
+                                    .resizable()
+                                    .frame(width: 50, height: 40, alignment: .leading)
+                                Text(log.timeStamp)
+                            }
+                            .id(log.id)
+                        }
+                    }
+                    .onAppear {
+                        // Scroll to the first log entry when the view appears
+                        if let firstLog = logModel.doorLog.first {
+                            proxy.scrollTo(firstLog.id, anchor: .top)
+                        }
                     }
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    Button("Options") {
-                        self.moreVC.toggle()
-                    }
-                }
-            }
-            .sheet(isPresented: $moreVC) {                
-                OptionsMenuView(index: self.index,
-                                validDevice: self.validDevice,
-                                doorStatus: self.statusModel.doorStatus,
-                                optionsModel: self.optionsModel)
-                    .environmentObject(config)
-            }
-            
+
             // Possible error messages
             Text(self.logModel.changeStatus.alert)
                 .foregroundColor(.red)
@@ -56,6 +62,13 @@ struct ContentView: View {
                 .padding(.bottom, 10)
         }
         .navigationBarTitle("Status Log")
+        .sheet(isPresented: $moreVC) {
+            OptionsMenuView(index: self.index,
+                            validDevice: self.validDevice,
+                            doorStatus: self.statusModel.doorStatus,
+                            optionsModel: self.optionsModel)
+                .environmentObject(config)
+        }
         .modifier(
             ConditionalDigitalCrownModifier(
                 isEnabled: logModel.doorLog.count > 1,
